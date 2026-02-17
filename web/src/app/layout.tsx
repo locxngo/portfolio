@@ -24,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+      </head>
       <body className={`${inter.variable} antialiased bg-white text-primary font-display`}>
         <NavigationProvider>
           <div className="relative flex h-screen w-full flex-col overflow-hidden p-20">

@@ -9,6 +9,8 @@ type NavigationContextType = {
     nextSlide: () => void;
     prevSlide: () => void;
     goToSlide: (index: number) => void;
+    currentLabel: string;
+    setCurrentLabel: (label: string) => void;
 };
 
 const NavigationContext = createContext<NavigationContextType | undefined>(undefined);
@@ -29,6 +31,8 @@ export const NavigationProvider = ({ children }: { children: ReactNode }) => {
         setCurrentSlide((prev) => (index >= 0 && index < totalSlides ? index : prev));
     }, [totalSlides]);
 
+    const [currentLabel, setCurrentLabel] = useState("");
+
     const value = useMemo(() => ({
         currentSlide,
         totalSlides,
@@ -36,7 +40,9 @@ export const NavigationProvider = ({ children }: { children: ReactNode }) => {
         nextSlide,
         prevSlide,
         goToSlide,
-    }), [currentSlide, totalSlides, setTotalSlides, nextSlide, prevSlide, goToSlide]);
+        currentLabel,
+        setCurrentLabel,
+    }), [currentSlide, totalSlides, setTotalSlides, nextSlide, prevSlide, goToSlide, currentLabel]);
 
     return (
         <NavigationContext.Provider value={value}>

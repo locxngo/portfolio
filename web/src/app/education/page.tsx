@@ -1,11 +1,11 @@
 'use client';
 
 import { useNavigation } from "../../context/NavigationContext";
-import { useEffect } from "react";
+import { use, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function EducationPage() {
-    const { currentSlide, setTotalSlides, goToSlide } = useNavigation();
+    const { currentSlide, setTotalSlides, goToSlide, setCurrentLabel } = useNavigation();
 
     useEffect(() => {
         setTotalSlides(3);
@@ -15,6 +15,11 @@ export default function EducationPage() {
             goToSlide(0);
         };
     }, [setTotalSlides, goToSlide]);
+
+    useEffect(() => {
+        const labels = ["2020-2022", "2006-2010", "Certifications"];
+        setCurrentLabel(labels[currentSlide] || "");
+    }, [currentSlide, setCurrentLabel]);
 
     return (
         <main className="flex flex-1 items-center justify-center relative w-full h-full">
@@ -36,19 +41,20 @@ export default function EducationPage() {
                                             <span className="bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Highest Achievement</span>
                                             <div className="h-px flex-1 bg-primary/10"></div>
                                         </div>
-                                        <h1 className="text-5xl md:text-8xl font-black tracking-tight leading-none mb-8">Master of Fine Arts</h1>
+                                        <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-none mb-8">Master of Information Systems</h1>
                                         <div className="flex flex-wrap gap-x-12 gap-y-6">
                                             <div>
-                                                <p className="text-[10px] font-bold uppercase text-gray-400 tracking-widest mb-1">Institution</p>
-                                                <p className="text-xl font-medium">Rhode Island School of Design</p>
+                                                <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Institution</p>
+                                                <p className="text-xl font-medium">Military Technical Academy</p>
+                                                <p className="text-xs font-light">Hanoi, Vietnam</p>
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-bold uppercase text-gray-400 tracking-widest mb-1">Period</p>
+                                                <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Period</p>
                                                 <p className="text-xl font-medium">2020 — 2022</p>
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-bold uppercase text-gray-400 tracking-widest mb-1">Location</p>
-                                                <p className="text-xl font-medium">Providence, RI</p>
+                                                <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Location</p>
+                                                <p className="text-xl font-medium">Hanoi, Vietnam</p>
                                             </div>
                                         </div>
                                         <div className="mt-12 border-t border-primary/10 pt-8 max-w-2xl">
@@ -105,19 +111,19 @@ export default function EducationPage() {
                                             <span className="bg-gray-200 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Foundational Studies</span>
                                             <div className="h-px flex-1 bg-primary/10"></div>
                                         </div>
-                                        <h2 className="text-5xl md:text-8xl font-black tracking-tight leading-none mb-8">Bachelor of Design</h2>
+                                        <h2 className="text-4xl md:text-6xl font-black tracking-tight leading-none mb-8">Bachelor of Science in Engineering Physics</h2>
                                         <div className="flex flex-wrap gap-x-12 gap-y-6">
                                             <div>
-                                                <p className="text-[10px] font-bold uppercase text-gray-400 tracking-widest mb-1">Institution</p>
-                                                <p className="text-xl font-medium">Parsons School of Design</p>
+                                                <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Institution</p>
+                                                <p className="text-xl font-medium">University of Engineering and Technology, Vietnam National University.</p>
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-bold uppercase text-gray-400 tracking-widest mb-1">Period</p>
-                                                <p className="text-xl font-medium">2016 — 2020</p>
+                                                <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Period</p>
+                                                <p className="text-xl font-medium">2006 — 2010</p>
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-bold uppercase text-gray-400 tracking-widest mb-1">Major</p>
-                                                <p className="text-xl font-medium">Communication Design</p>
+                                                <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Major</p>
+                                                <p className="text-xl font-medium">Physic</p>
                                             </div>
                                         </div>
                                         <div className="mt-12 space-y-4">

@@ -1,5 +1,6 @@
 'use client';
 
+import { Cloud, CodeXml, LayoutGrid } from "lucide-react";
 import { useNavigation } from "../../context/NavigationContext";
 import { useEffect } from "react";
 
@@ -17,7 +18,7 @@ export default function SkillsPage() {
             <header className="flex justify-between items-start mb-20 h-32">
                 <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-3 mb-2 text-primary/60 uppercase tracking-[0.2em] text-[10px] font-bold">
-                        <span className="w-12 h-[2px] bg-primary"></span>
+                        <span className="w-12 h-0.5 bg-primary"></span>
                         Professional Portfolio
                     </div>
                     <h1 className="text-6xl md:text-7xl font-black tracking-tighter leading-none text-primary uppercase">
@@ -30,7 +31,7 @@ export default function SkillsPage() {
                 {/* Category 1: Architecture */}
                 <section className="flex flex-col gap-8">
                     <div className="flex items-center gap-3">
-                        <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>grid_view</span>
+                                     <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>grid_view</span>
                         <h2 className="text-xl font-bold uppercase tracking-widest text-primary">Core Architecture</h2>
                     </div>
                     <ul className="flex flex-col gap-6">
@@ -55,7 +56,8 @@ export default function SkillsPage() {
                 {/* Category 2: Languages & Frameworks */}
                 <section className="flex flex-col gap-8">
                     <div className="flex items-center gap-3">
-                        <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>code</span>
+                        {/* <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>code</span> */}
+                        <CodeXml size={24} className="text-primary" />
                         <h2 className="text-xl font-bold uppercase tracking-widest text-primary">Languages & Dev</h2>
                     </div>
                     <ul className="flex flex-col gap-6">
@@ -103,22 +105,6 @@ export default function SkillsPage() {
                     </ul>
                 </section>
             </main>
-
-            {/* Side Navigation / Indicator for Skills Page */}
-            <div className="fixed right-10 top-1/2 -translate-y-1/2 flex flex-col items-center gap-8 z-40 hidden xl:flex">
-                <div className="flex flex-col gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20"></div>
-                    <div className="w-2 h-2 rounded-full bg-primary"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary/20"></div>
-                </div>
-                <div className="h-32 w-[1px] bg-primary/10 relative">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.3em] text-primary/40">
-                        Skills 2024
-                    </div>
-                </div>
-            </div>
 
             {/* Background Decorative Element (Subtle grid pattern) */}
             <div className="fixed inset-0 -z-10 opacity-[0.03] pointer-events-none" aria-hidden="true" style={{ backgroundImage: "radial-gradient(#1a1a1a 1px, transparent 1px)", backgroundSize: "40px 40px" }}>

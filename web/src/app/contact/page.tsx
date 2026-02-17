@@ -42,7 +42,7 @@ export default function ContactPage() {
                     {/* LinkedIn */}
                     <Link
                         className="group flex flex-col gap-4 p-8 border border-subtle hover:border-primary dark:hover:border-white transition-all duration-300 rounded-lg"
-                        href="#"
+                        href="https://linkedin.com/in/locxngo"
                     >
                         <div className="flex items-center justify-between">
                             <span className="text-primary dark:text-white">
@@ -63,7 +63,7 @@ export default function ContactPage() {
                     {/* GitHub */}
                     <Link
                         className="group flex flex-col gap-4 p-8 border border-subtle hover:border-primary dark:hover:border-white transition-all duration-300 rounded-lg"
-                        href="#"
+                        href="https://github.com/locxngo"
                     >
                         <div className="flex items-center justify-between">
                             <span className="text-primary dark:text-white">
