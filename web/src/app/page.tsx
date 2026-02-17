@@ -1,6 +1,7 @@
 'use client'
 
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   const goToExperience = () => {
@@ -13,7 +14,7 @@ export default function Home() {
     <main className="flex-1 flex flex-col items-center justify-center text-center">
       <div className="max-w-3xl w-full space-y-8">
         {/* Decorative Element */}
-        <div className="w-12 h-[1px] bg-primary/20 mx-auto mb-12"></div>
+        <div className="w-12 h-px bg-primary/20 mx-auto mb-12"></div>
         <div className="space-y-4">
           <h1 className="text-primary text-5xl md:text-7xl lg:text-9xl font-extrabold tracking-widest uppercase leading-[0.9]">
             Loc Ngo<br />
@@ -31,15 +32,14 @@ export default function Home() {
         </div>
         {/* Primary CTA */}
         <div className="pt-12">
-          <button className="group inline-flex items-center justify-center gap-4 bg-primary text-white px-10 py-5 rounded-lg hover:bg-primary/90 transition-all transform hover:-translate-y-1"
-            onClick={() => goToExperience()}>
+          <Link href="/experience" className="group inline-flex items-center justify-center gap-4 bg-primary text-white px-10 py-5 rounded-lg hover:bg-primary/90 transition-all transform hover:-translate-y-1">
             <span className="text-sm font-bold uppercase tracking-[0.2em]">
               Start Journey
             </span>
             <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">
               <ChevronRight size={16} />
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </main>

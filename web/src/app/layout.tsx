@@ -13,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Alexander Rhoades | Senior Software Architect",
-  description: "Senior Software Architect Portfolio",
+  title: "Loc Ngo | Senior Software Architect",
+  description: "A simple man with a big heart and a passion for building scalable distributed systems.",
 };
 
 export default function RootLayout({
