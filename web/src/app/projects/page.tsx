@@ -190,7 +190,7 @@ export default function ProjectsPage() {
     };
 
     return (
-        <main className="flex flex-1 items-center justify-center relative w-full h-full">
+        <main className="flex flex-1 items-center justify-center relative w-full h-full p-4 md:p-8">
             <div className="slide-container w-full h-full flex items-center justify-center">
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -242,7 +242,7 @@ export default function ProjectsPage() {
                         </div>
 
                         {/* Visual Content */}
-                        <div className="lg:col-span-7 h-100 md:h-125 w-full bg-primary/5 rounded-2xl border border-primary/10 overflow-hidden relative order-1 lg:order-2">
+                        <div className="hidden lg:block lg:col-span-7 h-100 md:h-125 w-full bg-primary/5 rounded-2xl border border-primary/10 overflow-hidden relative order-1 lg:order-2">
                             {renderVisual(project.visual)}
                         </div>
                     </motion.div>

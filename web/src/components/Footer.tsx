@@ -22,11 +22,11 @@ export default function Footer() {
     const nextPage = currentIndex < pages.length - 1 ? pages[currentIndex + 1] : null;
 
     return (
-        <footer className="flex items-center justify-between pt-12">
+        <footer className="flex items-center justify-between pt-4 md:pt-8">
             {/* Footer Navigation */}
-            <div className="flex items-center justify-between w-full">
+            <div className="flex flex-col md:flex-row items-center justify-between w-full">
                 {/* Vertical Nav Buttons */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 mb-4 md:mb-0">
                     {
                         (totalSlides > 1 && !pathname.includes('/contact')) && (
                             <>

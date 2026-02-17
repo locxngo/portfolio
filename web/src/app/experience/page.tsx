@@ -68,7 +68,7 @@ const experiences = [
         logo: "", // Placeholder if no specific logo
         roles: [
             {
-                title: "Software Architect",
+                title: "Founder & Lead Architect",
                 period: "",
                 current: false,
                 description: "Built and launched the MVP for a fintech platform, scaling from <span class=\"font-semibold text-primary\">0 to 50k users</span> in the first year.",
@@ -110,7 +110,7 @@ const experiences = [
         period: "Feb 2012 — Jan 2015",
         roles: [
             {
-                title: "Backend and Big-Data Developer",
+                title: "Android Technical Lead",
                 period: "",
                 current: false,
                 description: "Built and launched the MVP for a fintech platform, scaling from <span class=\"font-semibold text-primary\">0 to 50k users</span> in the first year.",
@@ -131,7 +131,7 @@ const experiences = [
         logo: "/cnc.jpeg",
         roles: [
             {
-                title: "Backend and Big-Data Developer",
+                title: "Android Technical Lead",
                 period: "",
                 current: false,
                 description: "Built and launched the MVP for a fintech platform, scaling from <span class=\"font-semibold text-primary\">0 to 50k users</span> in the first year.",
@@ -186,7 +186,7 @@ export default function ExperiencePage() {
     const experience = experiences[currentSlide] || experiences[0];
 
     return (
-        <main className="flex flex-1 items-center justify-center relative w-full h-full p-4 md:p-8">
+        <main className="flex flex-1 items-center justify-center relative w-full p-2 md:p-8 h-full overflow-y-auto md:overflow-hidden">
             <div className="slide-container w-full h-full flex items-center justify-center">
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -195,51 +195,51 @@ export default function ExperiencePage() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="w-full max-w-7xl bg-white border border-gray-100 rounded-xl shadow-2xl shadow-gray-200/50 overflow-hidden flex flex-col md:flex-row max-h-200"
+                        className="w-full max-w-7xl bg-white border border-gray-100 rounded-xl shadow-2xl shadow-gray-200/50 overflow-hidden flex flex-col md:flex-row h-full md:h-auto md:max-h-[800px]"
                     >
                         {/* Role Visual/Identity */}
-                        <div className="md:w-1/3 bg-gray-50 relative overflow-hidden flex items-center justify-center p-8 md:p-12 border-b md:border-b-0 md:border-r border-gray-100">
+                        <div className="bg-gray-50 relative overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 border-b md:border-b-0 md:border-r border-gray-100 md:w-1/3 shrink-0">
                             <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: "radial-gradient(#1a1a1a 1px, transparent 1px)", backgroundSize: "24px 24px" }}></div>
                             <div className="z-10 text-center">
-                                <div className="mb-6 inline-flex items-center justify-center w-24 h-24 rounded-full border-2 border-primary overflow-hidden">
+                                <div className="mb-4 md:mb-6 inline-flex items-center justify-center w-16 h-16 md:w-24 md:h-24 rounded-full border-2 border-primary overflow-hidden bg-white shadow-sm">
                                     {experience.logo ? (
                                         <img src={experience.logo} alt={experience.company} className="w-full h-full object-cover" />
                                     ) : (
-                                        <span className="material-symbols-outlined text-4xl text-primary">business</span>
+                                        <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">business</span>
                                     )}
                                 </div>
-                                <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">Company</h3>
-                                <p className="text-2xl font-bold text-primary">{experience.company}</p>
-                                <p className="text-sm text-gray-500 mt-2 italic">{experience.location}</p>
+                                <h3 className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">Company</h3>
+                                <p className="text-xl md:text-2xl font-bold text-primary">{experience.company}</p>
+                                <p className="text-xs md:text-sm text-gray-500 mt-2 italic">{experience.location}</p>
                             </div>
                         </div>
                         {/* Role Details */}
-                        <div className="md:w-2/3 p-8 md:p-16 flex flex-col justify-between overflow-y-auto max-h-200">
+                        <div className="flex-1 p-6 md:p-16 flex flex-col overflow-y-auto md:w-2/3">
                             <div>
-                                <div className="inline-flex items-center bg-black text-white px-4 py-1.5 rounded mb-8 sticky top-0 z-20">
-                                    <span className="material-symbols-outlined text-sm mr-2"><Calendar size={18} /></span>
-                                    <span className="text-xs font-bold tracking-widest uppercase">{experience.period}</span>
+                                <div className="inline-flex items-center bg-black text-white px-3 py-1 md:px-4 md:py-1.5 rounded mb-6 md:mb-8 sticky top-0 z-20 shadow-md">
+                                    <span className="material-symbols-outlined text-xs md:text-sm mr-2"><Calendar size={14} className="md:w-[18px] md:h-[18px]" /></span>
+                                    <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase">{experience.period}</span>
                                 </div>
                                 {/* Timeline Container */}
-                                <div className="space-y-12 relative before:absolute before:left-2.75 before:top-2 before:bottom-2 before:w-px before:bg-gray-200">
+                                <div className="space-y-8 md:space-y-12 relative before:absolute before:left-2.75 before:top-2 before:bottom-2 before:w-px before:bg-gray-200">
                                     {experience.roles.map((role, index) => (
-                                        <div key={index} className="relative pl-10">
+                                        <div key={index} className="relative pl-8 md:pl-10">
                                             {/* Timeline Dot */}
-                                            <div className={`absolute left-0 top-2 w-6 h-6 rounded-full border-4 border-white shadow-sm flex items-center justify-center ${role.current ? 'bg-black' : 'bg-gray-200'}`}>
-                                                <div className={`w-1.5 h-1.5 rounded-full ${role.current ? 'bg-white' : 'bg-gray-400'}`}></div>
+                                            <div className={`absolute left-0 top-1.5 md:top-2 w-5 h-5 md:w-6 md:h-6 rounded-full border-4 border-white shadow-sm flex items-center justify-center ${role.current ? 'bg-black' : 'bg-gray-200'}`}>
+                                                <div className={`w-1 md:w-1.5 h-1 md:h-1.5 rounded-full ${role.current ? 'bg-white' : 'bg-gray-400'}`}></div>
                                             </div>
 
                                             <div className="mb-2">
-                                                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{role.period || ''}</span>
-                                                <h2 className={`text-2xl md:text-3xl font-black text-primary tracking-tight mt-1 ${!role.current && 'opacity-70'}`}>{role.title}</h2>
+                                                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-0.5">{role.period || ''}</span>
+                                                <h2 className={`text-xl md:text-3xl font-black text-primary tracking-tight ${!role.current && 'opacity-70'}`}>{role.title}</h2>
                                             </div>
 
-                                            <p className="text-sm md:text-base text-gray-600 mb-6 max-w-xl leading-relaxed" dangerouslySetInnerHTML={{ __html: role.description }}></p>
+                                            <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6 max-w-xl leading-relaxed" dangerouslySetInnerHTML={{ __html: role.description }}></p>
 
-                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <div className="grid grid-cols-1 gap-3 md:gap-4">
                                                 {role.contributions.map((contribution, cIndex) => (
-                                                    <div key={cIndex} className="flex gap-3 items-start">
-                                                        <span className={`material-symbols-outlined text-lg ${role.current ? 'text-primary' : 'text-gray-400'}`}>{contribution.icon}</span>
+                                                    <div key={cIndex} className="flex gap-3 items-start p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                                                        <span className={`material-symbols-outlined text-base md:text-lg mt-0.5 ${role.current ? 'text-primary' : 'text-gray-400'}`}>{contribution.icon}</span>
                                                         <p className="text-xs text-gray-700 leading-snug">{contribution.text}</p>
                                                     </div>
                                                 ))}
