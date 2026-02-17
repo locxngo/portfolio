@@ -17,13 +17,14 @@ jobs:
       - name: Use Node.js 24.x
         uses: actions/setup-node@v4
         with:
-          node-version: '24' 
+          node-version: "24"
       - name: Install and Build 🔧
         env:
           NODE_ENV: production
         run: npm install && npm run build
         working-directory: ./web
-
+      - name: Add .nojekyll file 📝
+        run: touch web/out/.nojekyll
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
