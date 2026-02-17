@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a1a1a",
+                        "background-light": "#ffffff",
+                        "background-dark": "#191919",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Contact | Senior Software Architect</title>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .text-huge {
+            font-size: clamp(4rem, 15vw, 10rem);
+            line-height: 0.9;
+        }
+        .border-subtle {
+            border-color: rgba(26, 26, 26, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-primary dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden font-display">
+<!-- Top Navigation / Header -->
+<header class="flex items-center justify-between px-6 py-8 md:px-12 lg:px-20 border-b border-subtle sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-50 px-20 h-[100px]"><div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-primary dark:bg-white flex items-center justify-center">
+<span class="material-symbols-outlined text-white dark:text-primary text-xl">architecture</span>
+</div>
+<h2 class="text-sm font-bold uppercase tracking-widest">Portfolio 2024</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-xs font-bold uppercase tracking-widest hover:opacity-70 transition-opacity" href="#">Intro</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:opacity-70 transition-opacity" href="#">Experience</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:opacity-70 transition-opacity" href="#">Education</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:opacity-70 transition-opacity" href="#">Projects</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:opacity-70 transition-opacity" href="#">Skills</a>
+<a class="text-xs font-bold uppercase tracking-widest border-b-2 border-primary dark:border-white pb-1" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="px-6 py-2 bg-primary text-white dark:bg-white dark:text-primary text-xs font-bold uppercase tracking-widest rounded-full hover:opacity-90 transition-opacity">
+                        Download CV
+                    </button>
+</div></header>
+<!-- Main Content Section -->
+<main class="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-20 py-12 px-20 py-20">
+<div class="max-w-7xl mx-auto w-full">
+<!-- Hero Heading -->
+<div class="mb-12">
+<h1 class="text-huge font-extrabold tracking-tighter uppercase mb-4 opacity-95">
+                        CONTACT
+                    </h1>
+<p class="text-xl md:text-2xl font-medium text-primary/70 dark:text-white/70 max-w-xl">
+                        Let's build something together. 
+                        <span class="block mt-1">Available for strategic architecture consulting and core system design.</span>
+</p>
+</div>
+<!-- Contact Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+<!-- Email -->
+<a class="group flex flex-col gap-4 p-8 border border-subtle hover:border-primary dark:hover:border-white transition-all duration-300 rounded-lg" href="mailto:hello@architect.dev">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-3xl">mail</span>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
+</div>
+<div>
+<h3 class="text-xs font-bold uppercase tracking-widest text-primary/50 dark:text-white/50 mb-1">Email</h3>
+<p class="text-lg font-bold break-all">hello@architect.dev</p>
+</div>
+</a>
+<!-- LinkedIn -->
+<a class="group flex flex-col gap-4 p-8 border border-subtle hover:border-primary dark:hover:border-white transition-all duration-300 rounded-lg" href="#">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-3xl">share</span>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
+</div>
+<div>
+<h3 class="text-xs font-bold uppercase tracking-widest text-primary/50 dark:text-white/50 mb-1">LinkedIn</h3>
+<p class="text-lg font-bold break-all">linkedin.com/in/architectname</p>
+</div>
+</a>
+<!-- GitHub -->
+<a class="group flex flex-col gap-4 p-8 border border-subtle hover:border-primary dark:hover:border-white transition-all duration-300 rounded-lg" href="#">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-3xl">code</span>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
+</div>
+<div>
+<h3 class="text-xs font-bold uppercase tracking-widest text-primary/50 dark:text-white/50 mb-1">GitHub</h3>
+<p class="text-lg font-bold break-all">github.com/architectname</p>
+</div>
+</a>
+</div>
+</div>
+</main><div class="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-8 z-50">
+<div class="flex flex-col items-center gap-4">
+<div class="w-2 h-2 rounded-full border border-primary dark:border-white opacity-40"></div>
+<div class="w-2 h-2 rounded-full border border-primary dark:border-white opacity-40"></div>
+<div class="w-2 h-2 rounded-full border border-primary dark:border-white opacity-40"></div>
+<div class="w-2 h-2 rounded-full border border-primary dark:border-white opacity-40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary dark:bg-white"></div>
+</div>
+<div class="h-24 w-px bg-primary/20 dark:bg-white/20 relative">
+<span class="absolute top-full left-1/2 -translate-x-1/2 pt-4 text-[10px] font-bold uppercase tracking-[0.2em] whitespace-nowrap rotate-90 origin-top text-primary/40 dark:text-white/40 italic">
+                        Slide 05
+                    </span>
+</div>
+</div>
+<!-- Footer / Navigation -->
+<footer class="flex flex-col md:flex-row items-center justify-between px-6 py-10 md:px-20 border-t border-subtle gap-8"><!-- Left: Vertical Navigation Arrows -->
+<div class="flex items-center gap-4">
+<button class="w-12 h-12 flex items-center justify-center border border-primary dark:border-white rounded-full hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center border border-primary dark:border-white rounded-full hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all">
+<span class="material-symbols-outlined">arrow_downward</span>
+</button>
+</div>
+<!-- Center/Right: Copyright and Flow Navigation -->
+<div class="flex flex-col md:flex-row items-center gap-8">
+<p class="text-xs font-medium tracking-widest text-primary/40 dark:text-white/40 uppercase order-2 md:order-1">
+        © 2024 Senior Software Architect Portfolio. All rights reserved.
+    </p>
+<div class="flex items-center gap-4 order-1 md:order-2">
+<button class="flex items-center justify-center gap-2 px-6 h-12 border border-primary dark:border-white hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all rounded-lg group">
+<span class="material-symbols-outlined text-sm transition-transform group-hover:-translate-x-1">arrow_back</span>
+<span class="text-sm font-bold uppercase tracking-widest">Previous Slide</span>
+</button>
+<button class="flex items-center justify-center gap-2 px-6 h-12 bg-primary text-white dark:bg-white dark:text-primary hover:bg-primary/90 transition-all rounded-lg group">
+<span class="text-sm font-bold uppercase tracking-widest">Restart Deck</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">refresh</span>
+</button>
+</div>
+</div></footer>
+</div>
+<!-- Background texture detail (Subtle grid or lines) -->
+<div class="fixed inset-0 pointer-events-none -z-10 opacity-[0.03] dark:opacity-[0.05]">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+</body></html>

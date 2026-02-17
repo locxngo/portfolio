@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #1a1a1a;
+  --color-background-light: #f7f7f7;
+  --color-background-dark: #191919;
+
+  --font-display: var(--font-inter), sans-serif;
+}
+
+@utility text-kern-wide {
+  letter-spacing: 0.15em;
+}
+
+@utility text-huge {
+  font-size: clamp(4rem, 15vw, 10rem);
+  line-height: 0.9;
+}
+
+@utility border-subtle {
+  border-color: rgba(26, 26, 26, 0.1);
+}
+
+body {
+  font-family: var(--font-display);
+  background-color: #ffffff;
+}
