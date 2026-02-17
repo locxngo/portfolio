@@ -8,10 +8,10 @@ import { motion, AnimatePresence } from "framer-motion";
 const experiences = [
     {
         id: 1,
-        company: "Global Tech Solutions",
-        location: "San Francisco, CA",
+        company: "Fortna, Inc.",
+        location: "Atlanta, GA",
         role: "Senior Software Architect",
-        period: "Jan 2020 — Present",
+        period: "Mar 2022 — Present",
         description: "Led the migration to a distributed microservices architecture handling <span class=\"font-semibold text-primary\">10M+ daily requests</span> across 12 global regions.",
         contributions: [
             { icon: "bolt", text: "Reduced system latency by 45% through strategic implementation of edge caching and optimized API gateways." },
@@ -22,10 +22,10 @@ const experiences = [
     },
     {
         id: 2,
-        company: "Innovate AI Labs",
-        location: "New York, NY",
-        role: "Lead Backend Engineer",
-        period: "Mar 2017 — Dec 2019",
+        company: "Fortna",
+        location: "Hanoi, Vietnam",
+        role: "Lead Software Architect",
+        period: "Jan 2017 — Feb 2022",
         description: "Spearheaded the development of core machine learning infrastructure processing <span class=\"font-semibold text-primary\">5TB+ of data daily</span> for predictive analytics.",
         contributions: [
             { icon: "memory", text: "Optimized tensor processing pipelines, reducing model training time by 60% using distributed GPU clusters." },
@@ -81,7 +81,10 @@ export default function ExperiencePage() {
                             <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: "radial-gradient(#1a1a1a 1px, transparent 1px)", backgroundSize: "24px 24px" }}></div>
                             <div className="z-10 text-center">
                                 <div className="mb-6 inline-flex items-center justify-center w-24 h-24 rounded-full border-2 border-primary">
-                                    <span className="material-symbols-outlined text-4xl text-primary">cloud_done</span>
+                                    <img src='https://pbs.twimg.com/profile_images/1605565455695024129/4UM8RVOP_400x400.jpg' className="rounded-full"/>
+                                    {/* <span className="material-symbols-outlined text-4xl text-primary">
+                                        
+                                    </span> */}
                                 </div>
                                 <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">Company</h3>
                                 <p className="text-2xl font-bold text-primary">{experience.company}</p>

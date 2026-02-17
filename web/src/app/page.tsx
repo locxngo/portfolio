@@ -4,12 +4,6 @@ import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
-  const goToExperience = () => {
-    const experienceSection = document.getElementById("experience");
-    if (experienceSection) {
-      experienceSection.scrollIntoView({ behavior: "smooth" });
-    }
-  }
   return (
     <main className="flex-1 flex flex-col items-center justify-center text-center">
       <div className="max-w-3xl w-full space-y-8">
