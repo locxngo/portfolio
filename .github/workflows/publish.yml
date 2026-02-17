@@ -23,8 +23,6 @@ jobs:
           NODE_ENV: production
         run: npm install && npm run build
         working-directory: ./web
-      - name: Add .nojekyll file 📝
-        run: touch web/out/.nojekyll
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
