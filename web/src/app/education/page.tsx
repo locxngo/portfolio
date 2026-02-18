@@ -4,6 +4,7 @@ import { useNavigation } from "../../context/NavigationContext";
 import { use, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 export default function EducationPage() {
     const { currentSlide, setTotalSlides, goToSlide, setCurrentLabel } = useNavigation();
 
@@ -37,12 +38,12 @@ export default function EducationPage() {
                         >
                             <section className="w-full max-w-6xl bg-white rounded-3xl shadow-2xl shadow-gray-200 md:shadow-gray-300 border border-primary/5 overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 relative" id="milestone-1">
                                 <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-center">
-                                    <div className="md:col-span-8">
+                                    <div className="md:col-span-12">
                                         <div className="flex items-center gap-3 mb-4 md:mb-6">
                                             <span className="bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Highest Achievement</span>
                                             <div className="h-px flex-1 bg-primary/10"></div>
                                         </div>
-                                        <h1 className="text-3xl md:text-6xl font-black tracking-tight leading-none mb-6 md:mb-8">Master of Information Systems</h1>
+                                        <h1 className="text-2xl md:text-4xl font-black tracking-tight leading-none mb-6 md:mb-8">Master of Information Systems</h1>
                                         <div className="flex flex-wrap gap-x-8 md:gap-x-12 gap-y-4 md:gap-y-6">
                                             <div>
                                                 <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Institution</p>
@@ -51,37 +52,25 @@ export default function EducationPage() {
                                             </div>
                                             <div>
                                                 <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Period</p>
-                                                <p className="text-lg md:text-xl font-medium">2020 — 2022</p>
+                                                <p className="text-lg md:text-xl font-medium">2013 — 2016</p>
                                             </div>
                                             <div>
                                                 <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Location</p>
                                                 <p className="text-lg md:text-xl font-medium">Hanoi, Vietnam</p>
                                             </div>
                                         </div>
-                                        <div className="mt-8 md:mt-12 border-t border-primary/10 pt-6 md:pt-8 max-w-2xl">
+                                        <div className="mt-4 md:mt-8 border-t border-primary/10 pt-6 md:pt-8 max-w-full">
                                             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4 md:mb-6">
-                                                Concentrated in Digital Media and Interactive Design. Thesis explored the intersection of minimalist UI patterns and cognitive load in academic environments.
+                                                Concentrated in Distributed System and Machine Learning. Thesis focused on the application of genetic programming for time series forecasting, comparing its performance against traditional ARIMA models in financial data analysis.
                                             </p>
                                             <ul className="space-y-3">
-                                                <li className="flex items-start gap-3">
-                                                    <span className="material-symbols-outlined text-sm mt-1">check_circle</span>
-                                                    <span className="text-sm font-medium">Graduated with Presidential Honors (GPA 3.9/4.0)</span>
-                                                </li>
-                                                <li className="flex items-start gap-3">
-                                                    <span className="material-symbols-outlined text-sm mt-1">check_circle</span>
-                                                    <span className="text-sm font-medium">Research Grant: $15,000 for "Future of Interfaces"</span>
+                                                <li className="flex items-center gap-3">
+                                                    <span className="material-symbols-outlined text-sm mt-1">book</span>
+                                                    <span className="text-sm font-medium">Thesis: Genetic programming for time series forecastin</span>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    {/* <div className="md:col-span-4 flex justify-center md:justify-end">
-                                        <div className="relative group">
-                                            <div className="absolute -inset-4 border border-primary/5 rounded-xl group-hover:scale-105 transition-transform"></div>
-                                            <div className="w-64 h-64 bg-background-light flex items-center justify-center rounded-xl overflow-hidden grayscale">
-                                                <span className="material-symbols-outlined text-8xl text-primary/20">architecture</span>
-                                            </div>
-                                        </div>
-                                    </div> */}
                                 </div>
                             </section>
                         </motion.div>
@@ -96,27 +85,19 @@ export default function EducationPage() {
                             transition={{ duration: 0.4, ease: "easeInOut" }}
                             className="w-full h-full flex items-center justify-center p-4 md:p-6"
                         >
-                            <section className="w-full max-w-6xl bg-gray-50 rounded-3xl shadow-2xl border border-primary/5 overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 relative" id="milestone-2">
+                            <section className="w-full max-w-6xl bg-gray-50 rounded-3xl shadow-2xl shadow-gray-200 md:shadow-gray-300 border border-primary/5 overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 relative" id="milestone-2">
                                 <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-center">
-                                    {/* <div className="md:col-span-4 flex justify-center md:justify-start order-2 md:order-1">
-                                        <div className="w-64 h-80 bg-white border border-primary/10 p-8 flex flex-col justify-between rounded-lg shadow-sm">
-                                            <span className="material-symbols-outlined text-6xl text-primary/10">auto_awesome</span>
-                                            <div>
-                                                <h3 className="font-bold text-sm mb-1 uppercase tracking-tighter">Honors Program</h3>
-                                                <p className="text-xs text-gray-500 leading-tight">Member of the Alpha Lambda Delta Honor Society for academic excellence.</p>
-                                            </div>
-                                        </div>
-                                    </div> */}
-                                    <div className="md:col-span-8 order-1 md:order-2">
+                                    <div className="md:col-span-12 order-1 md:order-2">
                                         <div className="flex items-center gap-3 mb-4 md:mb-6">
                                             <span className="bg-gray-200 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Foundational Studies</span>
                                             <div className="h-px flex-1 bg-primary/10"></div>
                                         </div>
-                                        <h2 className="text-3xl md:text-6xl font-black tracking-tight leading-none mb-6 md:mb-8">Bachelor of Science in Engineering Physics</h2>
+                                        <h2 className="text-2xl md:text-4xl font-black tracking-tight leading-none mb-6 md:mb-8">Bachelor of Science in Engineering Physics</h2>
                                         <div className="flex flex-wrap gap-x-8 md:gap-x-12 gap-y-4 md:gap-y-6">
                                             <div>
                                                 <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Institution</p>
-                                                <p className="text-lg md:text-xl font-medium">University of Engineering and Technology, Vietnam National University.</p>
+                                                <p className="text-lg md:text-xl font-medium">University of Engineering and Technology.</p>
+                                                <p className="text-xs font-light">Vietnam National University, Hanoi, Vietnam</p>
                                             </div>
                                             <div>
                                                 <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Period</p>
@@ -124,20 +105,13 @@ export default function EducationPage() {
                                             </div>
                                             <div>
                                                 <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Major</p>
-                                                <p className="text-lg md:text-xl font-medium">Physic</p>
+                                                <p className="text-lg md:text-xl font-medium">Math and Physic</p>
                                             </div>
                                         </div>
-                                        <div className="mt-8 md:mt-12 space-y-4">
-                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                <div className="p-4 md:p-6 border border-primary/5 bg-white rounded-lg shadow-sm">
-                                                    <p className="text-[10px] font-bold uppercase text-primary mb-2">Key Project</p>
-                                                    <p className="text-sm text-gray-600 font-medium italic">"Re-defining the Grid: A study on Swiss Typography in digital mobile layouts."</p>
-                                                </div>
-                                                <div className="p-4 md:p-6 border border-primary/5 bg-white rounded-lg shadow-sm">
-                                                    <p className="text-[10px] font-bold uppercase text-primary mb-2">Achievements</p>
-                                                    <p className="text-sm text-gray-600 font-medium italic">Dean's List for 8 consecutive semesters. Lead UI Designer for the Parsons Annual.</p>
-                                                </div>
-                                            </div>
+                                        <div className="mt-4 md:mt-8 border-t border-primary/10 pt-6 md:pt-8 max-w-full">
+                                            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4 md:mb-6">
+                                                The main subjects focus on mathematics, quantum physics, and nanotechnology. They include probability theory and numerical analysis, as well as Monte Carlo simulations to calculate and predict the properties of magnetic materials when there are changes in the material structure at the nanoscale.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -154,55 +128,36 @@ export default function EducationPage() {
                             transition={{ duration: 0.4, ease: "easeInOut" }}
                             className="w-full h-full flex items-center justify-center p-4 md:p-6"
                         >
-                            <section className="w-full max-w-6xl bg-white rounded-3xl shadow-2xl border border-primary/5 overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 relative" id="milestone-3">
+                            <section className="w-full max-w-6xl bg-white rounded-3xl shadow-2xl shadow-gray-200 md:shadow-gray-300 border border-primary/5 overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 relative" id="milestone-3">
                                 <div className="max-w-4xl w-full">
-                                    <div className="text-center mb-8 md:mb-16">
+                                    <div className="text-center mb-4 md:mb-8">
                                         <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400">Additional Education</span>
-                                        <h2 className="text-3xl md:text-5xl font-black mt-2 md:mt-4">Professional Certifications</h2>
+                                        <h2 className="text-3xl md:text-5xl font-black mt-2 md:mt-4">Certifications</h2>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-primary/10 border border-primary/10 rounded-xl overflow-hidden">
                                         {/* Cert 1 */}
                                         <div className="bg-white p-6 md:p-10 hover:bg-gray-50 transition-colors">
                                             <div className="flex justify-between items-start mb-4 md:mb-6">
-                                                <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">verified_user</span>
+                                                <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">workspace_premium</span>
                                                 <span className="text-[10px] font-bold border border-primary px-2 py-0.5 rounded">2023</span>
                                             </div>
-                                            <h3 className="text-lg md:text-xl font-bold mb-2 leading-tight">Advanced Interaction Design Certificate</h3>
-                                            <p className="text-xs md:text-sm text-gray-500 font-medium">Interaction Design Foundation (IxDF)</p>
-                                            <div className="mt-4 md:mt-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest opacity-50">
-                                                <span>Credential ID: IXDF-99201-B</span>
+                                            <h3 className="text-lg md:text-xl font-bold mb-2 leading-tight">Course Certficate for Machine Learning</h3>
+                                            <p className="text-xs md:text-sm text-gray-500 font-medium">Stanford Online</p>
+                                            <div className="flex items-center gap-2 text-xs opacity-50 mt-2">
+                                                <span>This course provides a broad introduction to machine learning, data-mining, and statistical pattern recognition.</span>
                                             </div>
                                         </div>
                                         {/* Cert 2 */}
                                         <div className="bg-white p-6 md:p-10 hover:bg-gray-50 transition-colors">
                                             <div className="flex justify-between items-start mb-4 md:mb-6">
-                                                <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">analytics</span>
-                                                <span className="text-[10px] font-bold border border-primary px-2 py-0.5 rounded">2022</span>
+                                                <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">license</span>
+                                                <span className="text-[10px] font-bold border border-primary px-2 py-0.5 rounded">2010-2012</span>
                                             </div>
-                                            <h3 className="text-lg md:text-xl font-bold mb-2 leading-tight">Human-Computer Interaction Specialization</h3>
-                                            <p className="text-xs md:text-sm text-gray-500 font-medium">Georgia Institute of Technology</p>
-                                            <div className="mt-4 md:mt-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest opacity-50">
-                                                <span>Credential ID: GT-UX-8812</span>
+                                            <h3 className="text-lg md:text-xl font-bold mb-2 leading-tight">Higher Diploma Software Engineering</h3>
+                                            <p className="text-xs md:text-sm text-gray-500 font-medium">Hanoi Aptech</p>
+                                            <div className="flex items-center gap-2 text-xs opacity-50 mt-2">
+                                                <span>Focus on software development and engineering principles.</span>
                                             </div>
-                                        </div>
-                                        {/* Cert 3 */}
-                                        <div className="bg-white p-6 md:p-10 hover:bg-gray-50 transition-colors">
-                                            <div className="flex justify-between items-start mb-4 md:mb-6">
-                                                <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">palette</span>
-                                                <span className="text-[10px] font-bold border border-primary px-2 py-0.5 rounded">2021</span>
-                                            </div>
-                                            <h3 className="text-lg md:text-xl font-bold mb-2 leading-tight">Google UX Design Professional</h3>
-                                            <p className="text-xs md:text-sm text-gray-500 font-medium">Coursera / Google</p>
-                                            <div className="mt-4 md:mt-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest opacity-50">
-                                                <span>Credential ID: GOOG-UX-7712</span>
-                                            </div>
-                                        </div>
-                                        {/* Cert 4 */}
-                                        <div className="bg-white p-6 md:p-10 hover:bg-gray-50 transition-colors flex flex-col justify-center items-center text-center">
-                                            <p className="text-xs md:text-sm font-bold uppercase tracking-widest mb-4">Continuing Education</p>
-                                            <button className="bg-primary text-white text-xs px-6 py-3 rounded-lg font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">
-                                                View Full List
-                                            </button>
                                         </div>
                                     </div>
                                 </div>

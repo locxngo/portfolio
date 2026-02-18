@@ -33,6 +33,18 @@ export default function SkillsPage() {
                         </div>
                         <ul className="flex flex-col gap-6">
                             <li className="group">
+                                <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Software and System design</h3>
+                                <p className="text-primary/60 text-sm leading-relaxed">Microservices, distributed system, horizontal scale application, and event-driven architecture.</p>
+                            </li>
+                            <li className="group">
+                                <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Warehouse & Supply Chain</h3>
+                                <p className="text-primary/60 text-sm leading-relaxed">Warehouse Operations and Warehouse Execution System</p>
+                            </li>
+                            <li className="group">
+                                <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">AI Agent & Agentic</h3>
+                                <p className="text-primary/60 text-sm leading-relaxed">Data pipeline, contextual retrieval, RAG & hybrid search</p>
+                            </li>
+                            {/* <li className="group">
                                 <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Microservices</h3>
                                 <p className="text-primary/60 text-sm leading-relaxed">Scalable, decoupled service meshes with gRPC and REST.</p>
                             </li>
@@ -47,7 +59,7 @@ export default function SkillsPage() {
                             <li className="group">
                                 <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">DDD</h3>
                                 <p className="text-primary/60 text-sm leading-relaxed">Strategic and tactical patterns for complex domain logic.</p>
-                            </li>
+                            </li> */}
                         </ul>
                     </section>
                     {/* Category 2: Languages & Frameworks */}
@@ -59,6 +71,26 @@ export default function SkillsPage() {
                         </div>
                         <ul className="flex flex-col gap-6">
                             <li className="group">
+                                <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Programming Languages</h3>
+                                <p className="text-primary/60 text-sm leading-relaxed">Java, Go, Python, Typescript (React, NextJS), Shell script</p>
+                            </li>
+                            <li className="group">
+                                <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Frameworks</h3>
+                                <p className="text-primary/60 text-sm leading-relaxed">Micronaut, Expo, NextJS, Agno (Agent Framework)</p>
+                            </li>
+                            <li className="group">
+                                <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Databases</h3>
+                                <p className="text-primary/60 text-sm leading-relaxed">PostgreSQL, MySQL, MongoDB, Redis, ChromaDB</p>
+                            </li>
+                            <li className="group">
+                                <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Message Brokers</h3>
+                                <p className="text-primary/60 text-sm leading-relaxed">NATS, RabbitMQ, Redis Streams</p>
+                            </li>
+                            <li className="group">
+                                <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Big Data</h3>
+                                <p className="text-primary/60 text-sm leading-relaxed">Hadoop Mapreduce, Spark, Flink, Storm</p>
+                            </li>
+                            {/* <li className="group">
                                 <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Go (Golang)</h3>
                                 <p className="text-primary/60 text-sm leading-relaxed">Concurrent backend services and CLI tooling.</p>
                             </li>
@@ -73,17 +105,25 @@ export default function SkillsPage() {
                             <li className="group">
                                 <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">System Audits</h3>
                                 <p className="text-primary/60 text-sm leading-relaxed">Deep-dive technical reviews and performance profiling.</p>
-                            </li>
+                            </li> */}
                         </ul>
                     </section>
                     {/* Category 3: Infrastructure & Leadership */}
                     <section className="flex flex-col gap-8">
                         <div className="flex items-center gap-3">
                             <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>cloud</span>
-                            <h2 className="text-xl font-bold uppercase tracking-widest text-primary">Infra & Leadership</h2>
+                            <h2 className="text-xl font-bold uppercase tracking-widest text-primary">Infrastructure</h2>
                         </div>
                         <ul className="flex flex-col gap-6">
                             <li className="group">
+                                <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Docker & IaC</h3>
+                                <p className="text-primary/60 text-sm leading-relaxed">Docker, Ansible</p>
+                            </li>
+                            <li className="group">
+                                <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">CI/CD & Observability</h3>
+                                <p className="text-primary/60 text-sm leading-relaxed">Github Action, GitOps pipeline, Prometheus, and Grafana stacks.</p>
+                            </li>
+                            {/* <li className="group">
                                 <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Cloud Native (AWS)</h3>
                                 <p className="text-primary/60 text-sm leading-relaxed">EKS, Lambda, RDS, and Serverless architectures.</p>
                             </li>
@@ -98,7 +138,7 @@ export default function SkillsPage() {
                             <li className="group">
                                 <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Technical Strategy</h3>
                                 <p className="text-primary/60 text-sm leading-relaxed">Roadmapping, mentoring, and stakeholder management.</p>
-                            </li>
+                            </li> */}
                         </ul>
                     </section>
                 </main>

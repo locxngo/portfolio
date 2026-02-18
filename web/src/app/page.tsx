@@ -14,7 +14,7 @@ export default function Home() {
             Loc Ngo<br />
           </h1>
           <h2 className="text-primary/60 text-xs md:text-lg font-medium tracking-[0.3em] uppercase pt-2 md:pt-4">
-            Senior Software Architect{" "}
+            Senior Software Architect | Technical Consultant
           </h2>
         </div>
         <div className="max-w-xl mx-auto pt-6 md:pt-8">

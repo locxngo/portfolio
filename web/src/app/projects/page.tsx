@@ -15,7 +15,7 @@ interface Project {
     solution: string;
     tags: string[];
     links: {
-        source: string;
+        source?: string;
         demo?: string;
     };
     visual: "code" | "yaml" | "chroma";
@@ -31,7 +31,7 @@ const projects: Project[] = [
         challenge: "Building a low-latency data processing engine that could handle over 50,000 concurrent websocket connections while maintaining sub-millisecond serialization speeds.",
         solution: "I implemented a custom memory-mapped ring buffer and utilized high-performance Go routines to distribute ingestion loads across multi-core architectures.",
         tags: ["AI Agent", "LLM", "RAG", "Hybrid Search", "Python", "Typescripts", "Ansible", "Github Action"],
-        links: { source: "#", demo: "https://staging.atticus.vn/en" },
+        links: { demo: "https://staging.atticus.vn/en" },
         visual: "code",
     },
     {
@@ -226,10 +226,14 @@ export default function ProjectsPage() {
                             </div>
 
                             <div className="flex gap-4 pt-4">
-                                <a href={project.links.source} className="flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-lg hover:opacity-90 transition-opacity">
-                                    <Github size={20} className="text-white" />
-                                    <span className="text-xs font-bold uppercase tracking-wider">View Source</span>
-                                </a>
+                                {
+                                    project.links.source && (
+                                        <a href={project.links.source} className="flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-lg hover:opacity-90 transition-opacity">
+                                            <Github size={20} className="text-white" />
+                                            <span className="text-xs font-bold uppercase tracking-wider">View Source</span>
+                                        </a>
+                                    )
+                                }
                                 {
                                     project.links.demo && (
                                         <a href={project.links.demo} className="flex items-center gap-2 border border-primary/20 px-5 py-3 rounded-lg hover:bg-primary/5 transition-colors text-primary">
