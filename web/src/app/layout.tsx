@@ -29,7 +29,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased bg-white text-primary font-display`}>
         <NavigationProvider>
-          <div className="relative flex h-screen w-full flex-col overflow-hidden p-6 md:p-20">
+          <div className="relative flex h-screen w-full flex-col overflow-hidden p-4 md:p-12">
             <Header />
             {children}
 

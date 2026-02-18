@@ -4,6 +4,11 @@ import { Calendar, ChevronDown, ChevronUp } from "lucide-react";
 import { useNavigation } from "../../context/NavigationContext";
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import fortna from "@/img/fortna.jpg"
+import wala from "@/img/wala.png"
+import cnd from "@/img/cnc.jpeg"
+import vtcc from "@/img/vtcc.jpg"
 
 const experiences = [
     {
@@ -11,7 +16,7 @@ const experiences = [
         company: "Fortna, Inc.",
         location: "Atlanta, GA",
         period: "Jan 2022 — Present",
-        logo: "/fortna.jpg",
+        logo: "fortna",
         roles: [
             {
                 title: "Senior Software Architect",
@@ -44,7 +49,7 @@ const experiences = [
         company: "Fortna Vietnam LLC",
         location: "Hanoi, Vietnam",
         period: "Jan 2017 — Feb 2022",
-        logo: "/fortna.jpg",
+        logo: "fortna",
         roles: [
             {
                 title: "Software Architect",
@@ -86,7 +91,7 @@ const experiences = [
         company: "Viettel Cyberspace ​Center - Viettel Group",
         location: "Hanoi, Vietnam",
         period: "Feb 2015 — June 2016",
-        logo: "/vtcc.jpg",
+        logo: "vtcc",
         roles: [
             {
                 title: "Backend and Big-Data Developer",
@@ -106,7 +111,7 @@ const experiences = [
         id: 5,
         company: "Wala",
         location: "Hanoi, Vietnam",
-        logo: "/wala.png",
+        logo: "wala",
         period: "Feb 2012 — Jan 2015",
         roles: [
             {
@@ -128,7 +133,7 @@ const experiences = [
         company: "CNC Software",
         location: "Hanoi, Vietnam",
         period: "Aug 2010 — Jan 2012",
-        logo: "/cnc.jpeg",
+        logo: "cnc",
         roles: [
             {
                 title: "Android Technical Lead",
@@ -185,8 +190,23 @@ export default function ExperiencePage() {
 
     const experience = experiences[currentSlide] || experiences[0];
 
+    const getLogoSrc = (logo: string) => {
+        switch (logo) {
+            case "fortna":
+                return fortna;
+            case "wala":
+                return wala;
+            case "cnc":
+                return cnd;
+            case "vtcc":
+                return vtcc;
+            default:
+                return null;
+        }
+    }
+
     return (
-        <main className="flex flex-1 items-center justify-center relative w-full p-2 md:p-8 h-full overflow-y-auto md:overflow-hidden">
+        <main className="flex flex-1 items-center justify-center relative w-full p-2 md:p-4 h-full overflow-y-auto md:overflow-hidden">
             <div className="slide-container w-full h-full flex items-center justify-center">
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -195,7 +215,7 @@ export default function ExperiencePage() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="w-full max-w-7xl bg-white border border-gray-100 rounded-xl shadow-2xl shadow-gray-200/50 overflow-hidden flex flex-col md:flex-row h-full md:h-auto md:max-h-[800px]"
+                        className="w-full max-w-7xl bg-white border border-gray-100 rounded-xl shadow-2xl shadow-gray-200/50 md:shadow-gray-300 overflow-hidden flex flex-col md:flex-row h-full md:h-auto md:max-h-150"
                     >
                         {/* Role Visual/Identity */}
                         <div className="bg-gray-50 relative overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 border-b md:border-b-0 md:border-r border-gray-100 md:w-1/3 shrink-0">
@@ -203,7 +223,8 @@ export default function ExperiencePage() {
                             <div className="z-10 text-center">
                                 <div className="mb-4 md:mb-6 inline-flex items-center justify-center w-16 h-16 md:w-24 md:h-24 rounded-full border-2 border-primary overflow-hidden bg-white shadow-sm">
                                     {experience.logo ? (
-                                        <img src={experience.logo} alt={experience.company} className="w-full h-full object-cover" />
+                                        // <img src={experience.logo} alt={experience.company} className="w-full h-full object-cover" />
+                                        <Image src={getLogoSrc(experience.logo) || "/default-logo.png"} alt={experience.company} width={96} height={96} className="w-full h-full object-cover" />
                                     ) : (
                                         <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">business</span>
                                     )}
@@ -217,7 +238,7 @@ export default function ExperiencePage() {
                         <div className="flex-1 p-6 md:p-16 flex flex-col overflow-y-auto md:w-2/3">
                             <div>
                                 <div className="inline-flex items-center bg-black text-white px-3 py-1 md:px-4 md:py-1.5 rounded mb-6 md:mb-8 sticky top-0 z-20 shadow-md">
-                                    <span className="material-symbols-outlined text-xs md:text-sm mr-2"><Calendar size={14} className="md:w-[18px] md:h-[18px]" /></span>
+                                    <span className="material-symbols-outlined text-xs md:text-sm mr-2"><Calendar size={14} className="md:w-4.5 md:h-4.5" /></span>
                                     <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase">{experience.period}</span>
                                 </div>
                                 {/* Timeline Container */}

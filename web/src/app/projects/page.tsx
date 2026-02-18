@@ -190,7 +190,7 @@ export default function ProjectsPage() {
     };
 
     return (
-        <main className="flex flex-1 items-center justify-center relative w-full h-full p-4 md:p-8">
+        <main className="flex flex-1 items-center justify-center relative w-full p-2 md:p-8 h-full overflow-y-auto md:overflow-hidden">
             <div className="slide-container w-full h-full flex items-center justify-center">
                 <AnimatePresence mode="wait">
                     <motion.div

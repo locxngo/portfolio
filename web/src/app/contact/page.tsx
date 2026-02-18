@@ -7,7 +7,7 @@ export default function ContactPage() {
             <div className="max-w-7xl mx-auto w-full py-6 md:py-0 my-auto">
                 {/* Hero Heading */}
                 <div className="mb-8 md:mb-12">
-                    <h1 className="text-4xl md:text-7xl lg:text-9xl font-extrabold tracking-wider uppercase mb-4 opacity-95 break-words">
+                    <h1 className="text-4xl md:text-7xl lg:text-9xl font-extrabold tracking-wider uppercase mb-4 opacity-95 wrap-break-word">
                         CONTACT
                     </h1>
                     <p className="text-lg md:text-2xl font-medium text-primary/70 dark:text-white/70 max-w-xl leading-relaxed">

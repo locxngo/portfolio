@@ -13,22 +13,18 @@ export default function SkillsPage() {
     }, [setTotalSlides, goToSlide]);
 
     return (
-        <div className="flex-1 flex flex-col min-h-0 overflow-y-auto w-full">
-            <div className="flex flex-col pt-4 md:pt-20 pb-20">
+        <div className="flex-1 flex flex-col min-h-0 overflow-y-auto w-full items-center">
+            <div className="flex flex-col pt-4 md:pt-0 pb-0 md:max-w-7xl">
                 {/* Header Section */}
-                <header className="flex justify-between items-start mb-10 md:mb-20 h-auto md:h-32 shrink-0">
+                <header className="flex justify-between items-start mb-10 md:mb-20 h-auto md:h-24 shrink-0">
                     <div className="flex flex-col gap-2">
-                        <div className="flex items-center gap-3 mb-2 text-primary/60 uppercase tracking-[0.2em] text-[10px] font-bold">
-                            <span className="w-12 h-0.5 bg-primary"></span>
-                            Professional Portfolio
-                        </div>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-none text-primary uppercase">
                             Technical <br /> Expertise
                         </h1>
                     </div>
                 </header>
 
-                <main className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 border-t border-primary/10 pt-8 md:pt-16">
+                <main className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 border-t border-primary/10 pt-8 md:pt-16 md:overflow-hidden">
                     {/* Category 1: Architecture */}
                     <section className="flex flex-col gap-8">
                         <div className="flex items-center gap-3">
