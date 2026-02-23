@@ -99,8 +99,8 @@ const experiences = [
                 description: "Built large-scale distributed systems, delivering two high-impact platforms: a real-time spam SMS filtering system and a real-time message analytics platform.",
                 contributions: [
                     { icon: "graph_7", text: "Designed and developed distributed backend systems and analytical tools for large-scale network traffic monitoring leveraging Kafka, Storm, Hadoop, and Zookeeper." },
-                    { icon: "scan", text: "Architected and implemented a real-time spam SMS filtering and blocking system capable of processing nearly 1,000,000 SMS/minute, successfully eliminating 80–90% of spam across the entire carrier network — recognized with a Bronze Award at IT World Awards 2016" },
-                    { icon: "query_stats", text: "Built a high-throughput, real-time message storage and analytics platform using HDFS and MapReduce, engineered to sustain throughput exceeding 1,000,000 messages/second" },
+                    { icon: "scan", text: "Architected and implemented a real-time spam SMS filtering and blocking system capable of processing nearly 300,000 SMS/minute, successfully eliminating 80–90% of spam across the entire carrier network — recognized with a Bronze Award at IT World Awards 2016" },
+                    { icon: "query_stats", text: "Built a high-throughput, real-time message storage using HDFS and MapReduce, engineered to sustain throughput exceeding 1,000,000 messages/second" },
                 ]
             }
         ]
