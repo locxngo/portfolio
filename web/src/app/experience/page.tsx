@@ -22,24 +22,22 @@ const experiences = [
                 title: "Senior Software Architect",
                 period: "Mar 2025 — Present",
                 current: true,
-                description: "Led the migration to a distributed microservices architecture handling <span class=\"font-semibold text-primary\">10M+ daily requests</span> across 12 global regions.",
+                description: "",
                 contributions: [
-                    { icon: "bolt", text: "Reduced system latency by 45% through strategic implementation of edge caching and optimized API gateways." },
-                    { icon: "groups", text: "Mentored a cross-functional team of 25+ engineers, implementing DDD principles and automated CI/CD pipelines." },
-                    { icon: "layers", text: "Architected a scalable data mesh platform integrating Snowflake and Kafka for real-time analytics." },
-                    { icon: "security", text: "Established Zero-Trust security protocols across all cloud infrastructure, achieving SOC2 compliance." }
+                    { icon: "architecture", text: "Architected the Order Planner, a module that intelligently controls and balances order throughput volume across the distribution center." },
+                    { icon: "simulation", text: "Designed and implemented a human operations simulation framework used to benchmark WES performance and validate algorithmic behavior under realistic DC conditions, decoupling quality assurance from physical operational dependencies." },
+                    { icon: "graph_2", text: "Designed and implemented a custom partition support solution for NATS messaging, engineering a capability not available natively to meet the platform's scalability, ordering, and fault-tolerance requirements." },
+                    { icon: "auto_awesome", text: "Pioneered AI adoption initiatives by defining best practices, processes, and documentation for integrating AI tooling into the software development lifecycle, measurably improving code quality and delivery velocity." }
                 ]
             },
             {
                 title: "Software Architect",
                 period: "Mar 2022 — Mar 2025",
                 current: false,
-                description: "Spearheaded the development of core machine learning infrastructure processing <span class=\"font-semibold text-primary\">5TB+ of data daily</span> for predictive analytics.",
+                description: "",
                 contributions: [
-                    { icon: "memory", text: "Optimized tensor processing pipelines, reducing model training time by 60% using distributed GPU clusters." },
-                    { icon: "api", text: "Designed and implemented high-throughput RESTful APIs serving 500+ enterprise clients with 99.99% uptime." },
-                    { icon: "database", text: "Migrated legacy monolithic database to partitioned PostgreSQL clusters, improving query performance by 40%." },
-                    { icon: "code", text: "Introduced comprehensive unit and integration testing suites, increasing code coverage from 40% to 90%." }
+                    { icon: "upgrade", text: "Enhanced the internal Java framework to support Java 17+, introducing an improved dependency injection mechanism via Google Guice to increase application flexibility, extensibility, and customization." },
+                    { icon: "device_hub", text: "Designed and developed a Hardware Abstraction Service capable of managing 2,000+ concurrent devices across the distribution center, significantly reducing hardware constraints on application development teams." },
                 ]
             }
         ]
@@ -55,12 +53,13 @@ const experiences = [
                 title: "Software Architect",
                 current: false,
                 period: "",
-                description: "Built and launched the MVP for a fintech platform, scaling from <span class=\"font-semibold text-primary\">0 to 50k users</span> in the first year.",
+                description: "",
                 contributions: [
-                    { icon: "web", text: "Developed responsive React frontend and Node.js backend, ensuring seamless cross-platform user experience." },
-                    { icon: "payments", text: "Integrated Stripe and PayPal payment gateways, processing over $2M in transactions securely." },
-                    { icon: "cloud", text: "Deployed and managed AWS infrastructure using Terraform, establishing scalable cloud foundation." },
-                    { icon: "analytics", text: "Implemented real-time user analytics dashboard, driving data-informed product decisions." }
+                    { icon: "swap_horiz", text: "Led the architectural transformation of the company's legacy Warehouse Execution System (FortnaWES) into a modern microservices-based platform, improving scalability, maintainability, and deployment agility." },
+                    { icon: "sdk", text: "Designed and built an internal Java-based development framework that accelerated application development and enforced consistent coding standards across all services." },
+                    { icon: "modeling", text: "Engineered a unit-sorter simulator that enabled development, testing, and performance benchmarking of sorting services without requiring physical hardware integration, maintaining full quality and performance guarantees." },
+                    { icon: "rebase", text: "Designed and developed the Orchestration Engine, coordinating order and work sequencing across all operational areas within the distribution center." },
+                    { icon: "graph_4", text: "Architected and built a modular micro-frontend UI platform enabling parallel development across distributed teams, improving delivery speed and long-term maintainability." }
                 ]
             }
         ]
@@ -76,12 +75,11 @@ const experiences = [
                 title: "Founder & Lead Architect",
                 period: "",
                 current: false,
-                description: "Built and launched the MVP for a fintech platform, scaling from <span class=\"font-semibold text-primary\">0 to 50k users</span> in the first year.",
+                description: "",
                 contributions: [
-                    { icon: "web", text: "Developed responsive React frontend and Node.js backend, ensuring seamless cross-platform user experience." },
-                    { icon: "payments", text: "Integrated Stripe and PayPal payment gateways, processing over $2M in transactions securely." },
-                    { icon: "cloud", text: "Deployed and managed AWS infrastructure using Terraform, establishing scalable cloud foundation." },
-                    { icon: "analytics", text: "Implemented real-time user analytics dashboard, driving data-informed product decisions." }
+                    { icon: "open_run", text: "Founded and led the technical division of an outsourcing startup, owning architectural strategy, solution design, and end-to-end technical decision-making across client engagements." },
+                    { icon: "deployed_code", text: "Designed and delivered the first version of Yojee — a now-publicly listed logistics technology platform serving global freight forwarders and shippers including Maersk, CEVA Logistics, and Geodis" },
+                    { icon: "architecture", text: "Defined system architecture for a real-time logistics platform handling complex supply chain operations across road, air, and ocean freight networks across Asia Pacific." },
                 ]
             }
         ]
@@ -97,12 +95,11 @@ const experiences = [
                 title: "Backend and Big-Data Developer",
                 period: "",
                 current: false,
-                description: "Built and launched the MVP for a fintech platform, scaling from <span class=\"font-semibold text-primary\">0 to 50k users</span> in the first year.",
+                description: "Built large-scale distributed systems, delivering two high-impact platforms: a real-time spam SMS filtering system and a real-time message analytics platform.",
                 contributions: [
-                    { icon: "web", text: "Developed responsive React frontend and Node.js backend, ensuring seamless cross-platform user experience." },
-                    { icon: "payments", text: "Integrated Stripe and PayPal payment gateways, processing over $2M in transactions securely." },
-                    { icon: "cloud", text: "Deployed and managed AWS infrastructure using Terraform, establishing scalable cloud foundation." },
-                    { icon: "analytics", text: "Implemented real-time user analytics dashboard, driving data-informed product decisions." }
+                    { icon: "graph_7", text: "Designed and developed distributed backend systems and analytical tools for large-scale network traffic monitoring leveraging Kafka, Storm, Hadoop, and Zookeeper." },
+                    { icon: "scan", text: "Architected and implemented a real-time spam SMS filtering and blocking system capable of processing nearly 1,000,000 SMS/minute, successfully eliminating 80–90% of spam across the entire carrier network — recognized with a Bronze Award at IT World Awards 2016" },
+                    { icon: "query_stats", text: "Built a high-throughput, real-time message storage and analytics platform using HDFS and MapReduce, engineered to sustain throughput exceeding 1,000,000 messages/second" },
                 ]
             }
         ]
@@ -118,12 +115,12 @@ const experiences = [
                 title: "Android Technical Lead",
                 period: "",
                 current: false,
-                description: "Built and launched the MVP for a fintech platform, scaling from <span class=\"font-semibold text-primary\">0 to 50k users</span> in the first year.",
+                description: "Owned full-cycle Android development for a consumer messaging application, with a deep focus on low-level performance engineering.",
                 contributions: [
-                    { icon: "web", text: "Developed responsive React frontend and Node.js backend, ensuring seamless cross-platform user experience." },
-                    { icon: "payments", text: "Integrated Stripe and PayPal payment gateways, processing over $2M in transactions securely." },
-                    { icon: "cloud", text: "Deployed and managed AWS infrastructure using Terraform, establishing scalable cloud foundation." },
-                    { icon: "analytics", text: "Implemented real-time user analytics dashboard, driving data-informed product decisions." }
+                    { icon: "android", text: "Developed and shipped a full-featured Android messaging application, owning end-to-end UI implementation and core feature delivery." },
+                    { icon: "avg_time", text: "Benchmarked and optimized connection management libraries, improving network reliability and reducing latency for real-time messaging." },
+                    { icon: "memory", text: "Engineered photo optimization pipelines to reduce bandwidth consumption and enhance media loading performance." },
+                    { icon: "bolt", text: "Optimized UI rendering pipelines, application performance, and battery efficiency, resulting in improved end-user experience." }
                 ]
             }
         ]
@@ -139,12 +136,11 @@ const experiences = [
                 title: "Android Technical Lead",
                 period: "",
                 current: false,
-                description: "Built and launched the MVP for a fintech platform, scaling from <span class=\"font-semibold text-primary\">0 to 50k users</span> in the first year.",
+                description: "Led technical solution design and mobile architecture for client projects",
                 contributions: [
-                    { icon: "web", text: "Developed responsive React frontend and Node.js backend, ensuring seamless cross-platform user experience." },
-                    { icon: "payments", text: "Integrated Stripe and PayPal payment gateways, processing over $2M in transactions securely." },
-                    { icon: "cloud", text: "Deployed and managed AWS infrastructure using Terraform, establishing scalable cloud foundation." },
-                    { icon: "analytics", text: "Implemented real-time user analytics dashboard, driving data-informed product decisions." }
+                    { icon: "architecture", text: "Architected and designed mobile application frameworks and communication models aligned with client requirements and technical speciﬁcations." },
+                    { icon: "partner_exchange", text: "Led end-to-end solution design for client-facing Android applications, translating business concepts into eﬃcient technical implementations." },
+                    { icon: "code", text: "Researched, developed internal libraries and frameworks to streamline the development lifecycle and accelerate delivery" },
                 ]
             }
         ]
@@ -235,14 +231,14 @@ export default function ExperiencePage() {
                             </div>
                         </div>
                         {/* Role Details */}
-                        <div className="flex-1 p-6 md:p-16 flex flex-col overflow-y-auto md:w-2/3">
+                        <div className="flex-1 p-6 md:p-10 flex flex-col overflow-y-auto md:w-2/3">
                             <div>
                                 <div className="inline-flex items-center bg-black text-white px-3 py-1 md:px-4 md:py-1.5 rounded mb-6 md:mb-8 sticky top-0 z-20 shadow-md">
                                     <span className="material-symbols-outlined text-xs md:text-sm mr-2"><Calendar size={14} className="md:w-4.5 md:h-4.5" /></span>
                                     <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase">{experience.period}</span>
                                 </div>
                                 {/* Timeline Container */}
-                                <div className="space-y-8 md:space-y-12 relative before:absolute before:left-2.75 before:top-2 before:bottom-2 before:w-px before:bg-gray-200">
+                                <div className="space-y-4 md:space-y-8 relative before:absolute before:left-2.75 before:top-2 before:bottom-2 before:w-px before:bg-gray-200">
                                     {experience.roles.map((role, index) => (
                                         <div key={index} className="relative pl-8 md:pl-10">
                                             {/* Timeline Dot */}
@@ -257,9 +253,9 @@ export default function ExperiencePage() {
 
                                             <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6 max-w-xl leading-relaxed" dangerouslySetInnerHTML={{ __html: role.description }}></p>
 
-                                            <div className="grid grid-cols-1 gap-3 md:gap-4">
+                                            <div className="grid grid-cols-1 gap-1 md:gap-2">
                                                 {role.contributions.map((contribution, cIndex) => (
-                                                    <div key={cIndex} className="flex gap-3 items-start p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                                                    <div key={cIndex} className="flex gap-3 items-start p-1 rounded-lg hover:bg-gray-50 transition-colors">
                                                         <span className={`material-symbols-outlined text-base md:text-lg mt-0.5 ${role.current ? 'text-primary' : 'text-gray-400'}`}>{contribution.icon}</span>
                                                         <p className="text-xs text-gray-700 leading-snug">{contribution.text}</p>
                                                     </div>

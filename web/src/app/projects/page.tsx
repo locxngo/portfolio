@@ -74,7 +74,7 @@ const projects: Project[] = [
         solution: "",
         tags: ["Go", "ReactJS", "Clickhouse", "Fluentd", "Microservices"],
         links: { source: "https://github.com/hermes-solution" },
-        visual: "yaml"
+        visual: "hermes"
     }
 ];
 
@@ -216,7 +216,7 @@ export default function ProjectsPage() {
                             </div>
                             <div className="p-6 overflow-x-auto">
                                 <pre className="font-mono text-[10px] md:text-xs leading-relaxed text-gray-300">
-{`Usage: sqlbundle COMMAND [OPTIONS]
+                                    {`Usage: sqlbundle COMMAND [OPTIONS]
 
 COMMAND:
   init          Init new sql project
@@ -232,6 +232,60 @@ COMMAND:
   help          Print usage info`}
                                 </pre>
                             </div>
+                        </div>
+                    </div>
+                );
+            case "hermes":
+                return (
+                    <div className="w-full h-full flex items-center justify-center p-4 md:p-8 group">
+                        <div className="w-full max-w-4xl bg-white dark:bg-[#0d1117] rounded-xl shadow-[0_0_40px_-15px_rgba(0,0,0,0.3)] dark:shadow-none overflow-hidden border border-slate-200 dark:border-slate-800 transform transition-transform duration-500 group-hover:scale-[1.01] flex items-center justify-center p-6 md:p-12">
+                            <svg className="w-full h-auto text-slate-800 dark:text-slate-300 font-sans" viewBox="0 0 900 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                        <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+                                    </marker>
+                                </defs>
+
+                                <rect x="20" y="20" rx="10" width="280" height="150" fill="transparent" stroke="currentColor" strokeWidth="1.5" />
+                                <text x="160" y="155" textAnchor="middle" fill="currentColor" className="text-base font-medium">Docker Node</text>
+
+                                <rect x="40" y="40" rx="5" width="100" height="80" fill="transparent" stroke="currentColor" strokeWidth="1.5" />
+                                <text x="90" y="85" textAnchor="middle" fill="currentColor" className="text-sm">Container</text>
+
+                                <path d="M 140 80 L 180 80" stroke="currentColor" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
+
+                                <rect x="180" y="40" rx="5" width="100" height="80" fill="transparent" stroke="currentColor" strokeWidth="1.5" />
+                                <text x="230" y="85" textAnchor="middle" fill="currentColor" className="text-sm">Fluentd</text>
+
+                                <rect x="20" y="330" rx="10" width="280" height="150" fill="transparent" stroke="currentColor" strokeWidth="1.5" />
+                                <text x="160" y="465" textAnchor="middle" fill="currentColor" className="text-base font-medium">Docker Node</text>
+
+                                <rect x="40" y="350" rx="5" width="100" height="80" fill="transparent" stroke="currentColor" strokeWidth="1.5" />
+                                <text x="90" y="395" textAnchor="middle" fill="currentColor" className="text-sm">Container</text>
+
+                                <path d="M 140 390 L 180 390" stroke="currentColor" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
+
+                                <rect x="180" y="350" rx="5" width="100" height="80" fill="transparent" stroke="currentColor" strokeWidth="1.5" />
+                                <text x="230" y="395" textAnchor="middle" fill="currentColor" className="text-sm">Fluentd</text>
+
+                                <rect x="450" y="185" rx="5" width="120" height="80" fill="transparent" stroke="currentColor" strokeWidth="1.5" />
+                                <text x="510" y="230" textAnchor="middle" fill="currentColor" className="text-sm">Backend</text>
+
+                                <rect x="450" y="350" rx="5" width="120" height="80" fill="transparent" stroke="currentColor" strokeWidth="1.5" />
+                                <text x="510" y="395" textAnchor="middle" fill="currentColor" className="text-sm">Frontend</text>
+
+                                <ellipse cx="760" cy="200" rx="60" ry="20" fill="transparent" stroke="currentColor" strokeWidth="1.5" />
+                                <path d="M 700 200 L 700 270 A 60 20 0 0 0 820 270 L 820 200" fill="transparent" stroke="currentColor" strokeWidth="1.5" />
+                                <text x="760" y="255" textAnchor="middle" fill="currentColor" className="text-sm">Clickhouse</text>
+
+                                <path d="M 280 80 L 510 80 L 510 185" fill="transparent" stroke="currentColor" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
+
+                                <path d="M 280 390 L 365 390 L 365 225 L 450 225" fill="transparent" stroke="currentColor" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
+
+                                <path d="M 570 225 L 700 225" fill="transparent" stroke="currentColor" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
+
+                                <path d="M 510 265 L 510 350" fill="transparent" stroke="currentColor" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
+                            </svg>
                         </div>
                     </div>
                 );
