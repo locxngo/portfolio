@@ -107,7 +107,7 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 bottom-0 left-0 w-[280px] bg-white shadow-2xl z-50 md:hidden flex flex-col p-6 border-r border-primary/10"
+              className="fixed top-0 bottom-0 left-0 w-70 bg-white shadow-2xl z-50 md:hidden flex flex-col p-6 border-r border-primary/10"
             >
               <div className="flex justify-between items-center mb-8">
                 <h2 className="text-primary text-xs font-bold uppercase tracking-[0.2em]">

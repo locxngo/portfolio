@@ -22,7 +22,7 @@ const experiences = [
                 title: "Senior Software Architect",
                 period: "Mar 2025 — Present",
                 current: true,
-                description: "",
+                description: "Working closer to product and business stakeholders. I continued to own core platform architecture while tackling more complex infrastructure and scalability challenges at enterprise scale.",
                 contributions: [
                     { icon: "architecture", text: "Architected the Order Planner, a module that intelligently controls and balances order throughput volume across the distribution center." },
                     { icon: "simulation", text: "Designed and implemented a human operations simulation framework used to benchmark WES performance and validate algorithmic behavior under realistic DC conditions, decoupling quality assurance from physical operational dependencies." },
@@ -38,6 +38,7 @@ const experiences = [
                 contributions: [
                     { icon: "upgrade", text: "Enhanced the internal Java framework to support Java 17+, introducing an improved dependency injection mechanism via Google Guice to increase application flexibility, extensibility, and customization." },
                     { icon: "device_hub", text: "Designed and developed a Hardware Abstraction Service capable of managing 2,000+ concurrent devices across the distribution center, significantly reducing hardware constraints on application development teams." },
+                    { icon: "graph_3", text: "Designed and implemented the Task Activity Framework, a unified specification language bridging product owners and engineers — accelerating the translation of business requirements into consistent system design and implementation across the development lifecycle." },
                 ]
             }
         ]
@@ -53,7 +54,7 @@ const experiences = [
                 title: "Software Architect",
                 current: false,
                 period: "",
-                description: "",
+                description: "Responsible for driving the modernization of the platform, establishing engineering standards, and designing core system components that powered distribution center operations globally",
                 contributions: [
                     { icon: "swap_horiz", text: "Led the architectural transformation of the company's legacy Warehouse Execution System (FortnaWES) into a modern microservices-based platform, improving scalability, maintainability, and deployment agility." },
                     { icon: "sdk", text: "Designed and built an internal Java-based development framework that accelerated application development and enforced consistent coding standards across all services." },
@@ -75,7 +76,7 @@ const experiences = [
                 title: "Founder & Lead Architect",
                 period: "",
                 current: false,
-                description: "",
+                description: "Responsible for setting the overall technical direction, evaluating and selecting technology stacks, designing system architectures, and ensuring successful delivery across all client engagements.",
                 contributions: [
                     { icon: "open_run", text: "Founded and led the technical division of an outsourcing startup, owning architectural strategy, solution design, and end-to-end technical decision-making across client engagements." },
                     { icon: "deployed_code", text: "Designed and delivered the first version of Yojee — a now-publicly listed logistics technology platform serving global freight forwarders and shippers including Maersk, CEVA Logistics, and Geodis" },
@@ -251,7 +252,7 @@ export default function ExperiencePage() {
                                                 <h2 className={`text-xl md:text-3xl font-black text-primary tracking-tight ${!role.current && 'opacity-70'}`}>{role.title}</h2>
                                             </div>
 
-                                            <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6 max-w-xl leading-relaxed" dangerouslySetInnerHTML={{ __html: role.description }}></p>
+                                            <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6 max-w-full leading-relaxed" dangerouslySetInnerHTML={{ __html: role.description }}></p>
 
                                             <div className="grid grid-cols-1 gap-1 md:gap-2">
                                                 {role.contributions.map((contribution, cIndex) => (
