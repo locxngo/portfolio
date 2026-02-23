@@ -10,6 +10,11 @@ export default function Header() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const isProd = process.env.NODE_ENV === 'production';
+  const repoName = 'portfolio';
+  const basePath = isProd ? `/${repoName}` : '';
+  const cvUrl = `${basePath}/cv.pdf`;
+
   const isActive = (path: string) => pathname === path;
   const linkClasses = (path: string) =>
     `text-xs font-bold uppercase tracking-widest transition-all pb-1 ${isActive(path)
@@ -60,17 +65,27 @@ export default function Header() {
 
       <div className="flex items-center">
         {/* Desktop Download Button */}
-        <button className="hidden md:block bg-primary text-white rounded-full h-10 px-6 text-xs font-bold uppercase tracking-widest hover:bg-primary/90 transition-all cursor-pointer">
+        <a
+          href={cvUrl}
+          download="locngo_cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:flex items-center justify-center bg-primary text-white rounded-full h-10 px-6 text-xs font-bold uppercase tracking-widest hover:bg-primary/90 transition-all cursor-pointer"
+        >
           Download CV
-        </button>
+        </a>
 
         {/* Mobile Download Icon - Right Side */}
-        <button
-          className="md:hidden p-2 -mr-2 text-primary hover:bg-primary/5 rounded-full transition-colors"
+        <a
+          href={cvUrl}
+          download="locngo_cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="md:hidden p-2 -mr-2 text-primary hover:bg-primary/5 rounded-full transition-colors flex items-center justify-center"
           aria-label="Download CV"
         >
           <Download size={24} />
-        </button>
+        </a>
       </div>
 
       {/* Mobile Menu Overlay */}
@@ -128,10 +143,16 @@ export default function Header() {
 
                 <div className="h-px bg-primary/10 my-2" />
 
-                <button className="flex items-center gap-3 text-primary font-bold uppercase tracking-widest text-xs py-2">
+                <a
+                  href={cvUrl}
+                  download="locngo_cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-primary font-bold uppercase tracking-widest text-xs py-2 w-full text-left"
+                >
                   <Download size={16} />
                   Download CV
-                </button>
+                </a>
               </div>
             </motion.div>
           </>

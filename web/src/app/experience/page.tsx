@@ -211,7 +211,7 @@ export default function ExperiencePage() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="w-full max-w-7xl bg-white border border-gray-100 rounded-xl shadow-2xl shadow-gray-200/50 md:shadow-gray-300 overflow-hidden flex flex-col md:flex-row h-full md:h-auto md:max-h-150"
+                        className="w-full max-w-7xl bg-white border border-gray-100 rounded-xl shadow-2xl shadow-gray-200/50 md:shadow-gray-300 overflow-hidden flex flex-col md:flex-row h-full md:h-auto md:max-h-120"
                     >
                         {/* Role Visual/Identity */}
                         <div className="bg-gray-50 relative overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 border-b md:border-b-0 md:border-r border-gray-100 md:w-1/3 shrink-0">
