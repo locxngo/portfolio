@@ -9,7 +9,7 @@ export default function EducationPage() {
     const { currentSlide, setTotalSlides, goToSlide, setCurrentLabel } = useNavigation();
 
     useEffect(() => {
-        setTotalSlides(3);
+        setTotalSlides(4);
         goToSlide(0);
         return () => {
             setTotalSlides(1);
@@ -18,7 +18,7 @@ export default function EducationPage() {
     }, [setTotalSlides, goToSlide]);
 
     useEffect(() => {
-        const labels = ["2020-2022", "2006-2010", "Certifications"];
+        const labels = ["2020-2022", "2010-2012", "2006-2010", "Certifications"];
         setCurrentLabel(labels[currentSlide] || "");
     }, [currentSlide, setCurrentLabel]);
 
@@ -78,6 +78,49 @@ export default function EducationPage() {
 
                     {currentSlide === 1 && (
                         <motion.div
+                            key="higher-diploma"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                            className="w-full h-full flex items-center justify-center p-4 md:p-6"
+                        >
+                            <section className="w-full max-w-6xl bg-gray-50 rounded-3xl shadow-2xl shadow-gray-200 md:shadow-gray-300 border border-primary/5 overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 relative" id="milestone-2">
+                                <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-center">
+                                    <div className="md:col-span-12 order-1 md:order-2">
+                                        <div className="flex items-center gap-3 mb-4 md:mb-6">
+                                            <span className="bg-gray-200 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Foundational Studies</span>
+                                            <div className="h-px flex-1 bg-primary/10"></div>
+                                        </div>
+                                        <h2 className="text-2xl md:text-4xl font-black tracking-tight leading-none mb-6 md:mb-8">Higher Diploma of Software Engineering</h2>
+                                        <div className="flex flex-wrap gap-x-8 md:gap-x-12 gap-y-4 md:gap-y-6">
+                                            <div>
+                                                <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Institution</p>
+                                                <p className="text-lg md:text-xl font-medium">Hanoi Aptech</p>
+                                                <p className="text-xs font-light">Hanoi, Vietnam</p>
+                                            </div>
+                                            <div>
+                                                <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Period</p>
+                                                <p className="text-lg md:text-xl font-medium">2010 — 2012</p>
+                                            </div>
+                                            <div>
+                                                <p className="text-xs font-bold uppercase text-gray-400 tracking-widest mb-1">Major</p>
+                                                <p className="text-lg md:text-xl font-medium">Software Engineering</p>
+                                            </div>
+                                        </div>
+                                        <div className="mt-4 md:mt-8 border-t border-primary/10 pt-6 md:pt-8 max-w-full">
+                                            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4 md:mb-6">
+                                                Concentrated on software development and engineering principles.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </motion.div>
+                    )}
+
+                    {currentSlide === 2 && (
+                        <motion.div
                             key="bachelors"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -119,7 +162,7 @@ export default function EducationPage() {
                         </motion.div>
                     )}
 
-                    {currentSlide === 2 && (
+                    {currentSlide === 3 && (
                         <motion.div
                             key="certifications"
                             initial={{ opacity: 0, y: 20 }}
@@ -134,7 +177,7 @@ export default function EducationPage() {
                                         <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400">Additional Education</span>
                                         <h2 className="text-3xl md:text-5xl font-black mt-2 md:mt-4">Certifications</h2>
                                     </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-primary/10 border border-primary/10 rounded-xl overflow-hidden">
+                                    <div className="grid grid-cols-1 md:grid-cols-1 gap-px bg-primary/10 border border-primary/10 rounded-xl overflow-hidden">
                                         {/* Cert 1 */}
                                         <div className="bg-white p-6 md:p-10 hover:bg-gray-50 transition-colors">
                                             <div className="flex justify-between items-start mb-4 md:mb-6">
@@ -145,18 +188,6 @@ export default function EducationPage() {
                                             <p className="text-xs md:text-sm text-gray-500 font-medium">Stanford Online</p>
                                             <div className="flex items-center gap-2 text-xs opacity-50 mt-2">
                                                 <span>This course provides a broad introduction to machine learning, data-mining, and statistical pattern recognition.</span>
-                                            </div>
-                                        </div>
-                                        {/* Cert 2 */}
-                                        <div className="bg-white p-6 md:p-10 hover:bg-gray-50 transition-colors">
-                                            <div className="flex justify-between items-start mb-4 md:mb-6">
-                                                <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">license</span>
-                                                <span className="text-[10px] font-bold border border-primary px-2 py-0.5 rounded">2010-2012</span>
-                                            </div>
-                                            <h3 className="text-lg md:text-xl font-bold mb-2 leading-tight">Higher Diploma Software Engineering</h3>
-                                            <p className="text-xs md:text-sm text-gray-500 font-medium">Hanoi Aptech</p>
-                                            <div className="flex items-center gap-2 text-xs opacity-50 mt-2">
-                                                <span>Focus on software development and engineering principles.</span>
                                             </div>
                                         </div>
                                     </div>

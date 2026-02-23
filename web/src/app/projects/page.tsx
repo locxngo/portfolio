@@ -8,7 +8,6 @@ import { useNavigation } from "../../context/NavigationContext";
 interface Project {
     id: number;
     title: string;
-    subtitle: string;
     period: string,
     description: string;
     challenge: string;
@@ -18,44 +17,63 @@ interface Project {
         source?: string;
         demo?: string;
     };
-    visual: "code" | "yaml" | "chroma";
+    visual: "code" | "yaml" | "chroma" | "sqlbundle" | "hermes";
 }
 
 const projects: Project[] = [
     {
         id: 1,
         title: "Atticus",
-        subtitle: "Project One",
         period: "2025 — Present",
-        description: "",
-        challenge: "Building a low-latency data processing engine that could handle over 50,000 concurrent websocket connections while maintaining sub-millisecond serialization speeds.",
-        solution: "I implemented a custom memory-mapped ring buffer and utilized high-performance Go routines to distribute ingestion loads across multi-core architectures.",
-        tags: ["AI Agent", "LLM", "RAG", "Hybrid Search", "Python", "Typescripts", "Ansible", "Github Action"],
+        description: "Atticus is an advanced AI-driven legal assistant designed specifically for Vietnamese law and legal practice. From reviewing contracts governed by Vietnamese law to researching regulations, circulars, and local precedents, Atticus helps legal professionals work smarter, faster, and with greater confidence in every matter.",
+        challenge: "",
+        solution: "",
+        tags: ["AI Agent", "RAG", "Hybrid Search", "Python", "Typescript", "Ansible", "Github Action"],
         links: { demo: "https://staging.atticus.vn/en" },
         visual: "code",
     },
     {
         id: 2,
         title: "Chroma Client",
-        subtitle: "Project Two",
         period: "2025",
-        description: "",
-        challenge: "Modernizing legacy customer data pipelines into a real-time reactive interface that scales with enterprise-level datasets.",
-        solution: "Developed a serverless event-driven architecture using AWS Lambda and DynamoDB Streams to ensure eventual consistency and zero-downtime migrations.",
-        tags: ["RAG", "LLM", "Java", "Embedding"],
+        description: "An implementation of ChromaDB client in Java used to connect to a running ChromaDB server or service.",
+        challenge: "",
+        solution: "",
+        tags: ["Java", "Embedding", "Maven"],
         links: { source: "https://github.com/locxngo/chroma-client" },
         visual: "chroma"
     },
     {
         id: 3,
+        title: "sqlBundle",
+        period: "2022",
+        description: "A lightweight, SQL-based database migration tool that uses plain SQL files",
+        challenge: "",
+        solution: "",
+        tags: ["Go", "Workflow", "Databse Migration"],
+        links: { source: "https://github.com/locxngo/sqlbundle" },
+        visual: "sqlbundle"
+    },
+    {
+        id: 4,
         title: "Vulcan",
-        subtitle: "Project Three",
         period: "2021",
-        description: "",
-        challenge: "Improving developer experience by reducing build times and automating security scanning without complex configuration files.",
-        solution: "I built a Docker-native orchestration layer that leverages shared layer caching and automated YAML linting to speed up build cycles by 40%.",
-        tags: ["Go", "CI/CD", "Workflow", "Docker"],
+        description: "Container-native CI/CD platform that uses Docker containers to run automated builds, tests, and deployments based on pipeline conﬁgurations deﬁned in a YAML ﬁle.",
+        challenge: "",
+        solution: "",
+        tags: ["Go", "CI/CD", "Workflow", "Docker", "Orchestration Engine"],
         links: { source: "https://github.com/locxngo/vulcan" },
+        visual: "yaml"
+    },
+    {
+        id: 5,
+        title: "Hermes",
+        period: "2020",
+        description: "It is solution focused on simple real-time logmanagement for on-premises Docker environments and related utilities.",
+        challenge: "",
+        solution: "",
+        tags: ["Go", "ReactJS", "Clickhouse", "Fluentd", "Microservices"],
+        links: { source: "https://github.com/hermes-solution" },
         visual: "yaml"
     }
 ];
@@ -184,6 +202,39 @@ export default function ProjectsPage() {
                         </div>
                     </div>
                 );
+            case "sqlbundle":
+                return (
+                    <div className="w-full h-full flex items-center justify-center p-8 group">
+                        <div className="w-full max-w-2xl bg-[#0d1117] rounded-xl shadow-2xl overflow-hidden border border-slate-700/50 transform transition-transform duration-500 group-hover:scale-[1.02]">
+                            <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-[#161b22]">
+                                <div className="flex gap-1.5">
+                                    <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                    <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                    <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                                </div>
+                                <div className="ml-4 text-xs text-white/40 font-mono">Terminal</div>
+                            </div>
+                            <div className="p-6 overflow-x-auto">
+                                <pre className="font-mono text-[10px] md:text-xs leading-relaxed text-gray-300">
+{`Usage: sqlbundle COMMAND [OPTIONS]
+
+COMMAND:
+  init          Init new sql project
+  create        Create a new sql file
+  install       Download and install dependencies into deps directory
+  pack          Packing
+  clean         Remove build directory
+  publish       Deploy package to repository
+  list          List all migrations file
+  version       Print version of sql-bundle
+  upgrade       Upgrade database to latest version
+  downgrade     Downgrade database to previous version or any specific version
+  help          Print usage info`}
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                );
             default:
                 return null;
         }
@@ -204,17 +255,32 @@ export default function ProjectsPage() {
                         {/* Text Content */}
                         <div className="lg:col-span-5 flex flex-col gap-8 order-2 lg:order-1">
                             <div className="flex flex-col gap-2">
-                                <span className="text-sm font-bold tracking-[0.2em] uppercase text-primary/40">{project.subtitle}</span>
+                                {/* <span className="text-sm font-bold tracking-[0.2em] uppercase text-primary/40">{project.subtitle}</span> */}
                                 <h1 className="text-5xl md:text-6xl font-black leading-tight text-primary">{project.title}</h1>
                             </div>
 
                             <div className="flex flex-col gap-4 text-primary/70 leading-relaxed text-sm md:text-base">
-                                <p>
-                                    <span className="font-bold text-primary">The Challenge:</span> {project.challenge}
-                                </p>
-                                <p>
-                                    <span className="font-bold text-primary">The Solution:</span> {project.solution}
-                                </p>
+                                {
+                                    project.description && (
+                                        <p>
+                                            {project.description}
+                                        </p>
+                                    )
+                                }
+                                {
+                                    project.challenge && (
+                                        <p>
+                                            <span className="font-bold text-primary">The Challenge:</span> {project.challenge}
+                                        </p>
+                                    )
+                                }
+                                {
+                                    project.solution && (
+                                        <p>
+                                            <span className="font-bold text-primary">The Solution:</span> {project.solution}
+                                        </p>
+                                    )
+                                }
                             </div>
 
                             <div className="flex flex-wrap gap-2">
