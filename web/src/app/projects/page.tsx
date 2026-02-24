@@ -295,7 +295,7 @@ COMMAND:
     };
 
     return (
-        <main className="flex flex-1 items-center justify-center relative w-full p-2 md:p-8 h-full overflow-y-auto md:overflow-hidden">
+        <main className="flex flex-1 p-6 md:p-0 items-center justify-center relative w-full p-2 md:p-8 h-full overflow-y-auto md:overflow-hidden">
             <div className="slide-container w-full h-full flex items-center justify-center">
                 <AnimatePresence mode="wait">
                     <motion.div

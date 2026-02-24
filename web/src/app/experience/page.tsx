@@ -22,7 +22,7 @@ const experiences = [
                 title: "Senior Software Architect",
                 period: "Mar 2025 — Present",
                 current: true,
-                description: "Working closer to product and business stakeholders. I continued to own core platform architecture while tackling more complex infrastructure and scalability challenges at enterprise scale.",
+                description: "Working closer to product and business stakeholders. Continued to own core platform architecture while tackling more complex infrastructure and scalability challenges at enterprise scale.",
                 contributions: [
                     { icon: "architecture", text: "Architected the Order Planner, a module that intelligently controls and balances order throughput volume across the distribution center." },
                     { icon: "simulation", text: "Designed and implemented a human operations simulation framework used to benchmark WES performance and validate algorithmic behavior under realistic DC conditions, decoupling quality assurance from physical operational dependencies." },
@@ -218,7 +218,7 @@ export default function ExperiencePage() {
                         <div className="bg-gray-50 relative overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 border-b md:border-b-0 md:border-r border-gray-100 md:w-1/3 shrink-0">
                             <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: "radial-gradient(#1a1a1a 1px, transparent 1px)", backgroundSize: "24px 24px" }}></div>
                             <div className="z-10 text-center">
-                                <div className="mb-4 md:mb-6 inline-flex items-center justify-center w-16 h-16 md:w-24 md:h-24 rounded-full border-2 border-primary overflow-hidden bg-white shadow-sm">
+                                <div className="mb-4 md:mb-6 hidden md:inline-flex  items-center justify-center w-16 h-16 md:w-24 md:h-24 rounded-full border-2 border-primary overflow-hidden bg-white shadow-sm">
                                     {experience.logo ? (
                                         // <img src={experience.logo} alt={experience.company} className="w-full h-full object-cover" />
                                         <Image src={getLogoSrc(experience.logo) || "/default-logo.png"} alt={experience.company} width={96} height={96} className="w-full h-full object-cover" />

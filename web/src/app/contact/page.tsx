@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ContactPage() {
     return (
-        <main className="flex-1 flex flex-col min-h-0 overflow-y-auto w-full">
+        <main className="flex-1 flex flex-col p-6 md:p-0 min-h-full overflow-y-auto w-full">
             <div className="max-w-7xl mx-auto w-full py-6 md:py-0 my-auto">
                 {/* Hero Heading */}
                 <div className="mb-8 md:mb-12">

@@ -36,7 +36,7 @@ export default function EducationPage() {
                             transition={{ duration: 0.4, ease: "easeInOut" }}
                             className="w-full h-full flex items-center justify-center p-4 md:p-6"
                         >
-                            <section className="w-full max-w-6xl bg-white rounded-3xl shadow-2xl shadow-gray-200 md:shadow-gray-300 border border-primary/5 overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 relative" id="milestone-1">
+                            <section className="w-full max-w-6xl bg-white rounded-xl shadow-2xl shadow-gray-200 md:shadow-gray-300 border border-primary/5 overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 relative" id="milestone-1">
                                 <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-center">
                                     <div className="md:col-span-12">
                                         <div className="flex items-center gap-3 mb-4 md:mb-6">
