@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       {/* --- DESKTOP VIEW --- */}
-      <main className="hidden md:flex flex-1 flex-col items-center justify-center text-center">
+      <main className="hidden md:flex flex-1 flex-col h-full items-center justify-center text-center">
         <div className="max-w-3xl w-full space-y-8">
           {/* Decorative Element */}
           <div className="w-12 h-px bg-primary/20 mx-auto mb-8 md:mb-12"></div>

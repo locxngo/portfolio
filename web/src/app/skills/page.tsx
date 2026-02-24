@@ -13,7 +13,7 @@ export default function SkillsPage() {
     }, [setTotalSlides, goToSlide]);
 
     return (
-        <div className="flex-1 flex flex-col min-h-full overflow-y-auto w-full items-center justify-center">
+        <div className="flex-1 flex flex-col min-h-full overflow-y-auto w-full items-center md:justify-center">
             <div className="flex flex-col  p-6 md:p-0 pt-4 md:pt-0 pb-0 md:max-w-7xl">
                 {/* Header Section */}
                 <header className="flex justify-between items-start mb-10 md:mb-20 h-auto md:h-24 shrink-0">

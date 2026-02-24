@@ -9,6 +9,14 @@ export default function MobileFooter() {
     const router = useRouter();
 
     const pages = ['/', '/experience', '/education', '/projects', '/skills', '/contact'];
+    const pageTitles: Record<string, string> = {
+        '/': 'Intro',
+        '/experience': 'Experience',
+        '/education': 'Education',
+        '/projects': 'Projects',
+        '/skills': 'Skills',
+        '/contact': 'Contact'
+    };
     const currentIndex = pages.indexOf(pathname);
 
     // Determine previous and next pages
@@ -41,7 +49,7 @@ export default function MobileFooter() {
 
                 {/* Page Indicator */}
                 <div className="text-xs font-bold text-slate-400 tracking-widest uppercase">
-                    {String(currentIndex + 1).padStart(2, '0')} / {String(pages.length).padStart(2, '0')}
+                    {pageTitles[pathname] || ''}
                 </div>
 
                 {/* Vertical Navigation */}
