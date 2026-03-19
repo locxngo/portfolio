@@ -51,7 +51,7 @@ const experiences = [
         logo: "fortna",
         roles: [
             {
-                title: "Software Architect",
+                title: "Senior Software Engineer",
                 current: false,
                 period: "",
                 description: "Responsible for driving the modernization of the platform, establishing engineering standards, and designing core system components that powered distribution center operations globally",
