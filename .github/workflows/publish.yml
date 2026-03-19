@@ -18,8 +18,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "24"
-      - name: Force install typescript 🔧
-        run: npm install --save-dev typescript
+      - name: Force install dev dependencies 🔧
+        run: npm install --include=dev
         working-directory: ./web
       - name: Install and Build 🔧
         env:
