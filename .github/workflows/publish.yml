@@ -23,7 +23,7 @@ jobs:
         working-directory: ./web
       - name: Install and Build 🔧
         env:
-          NODE_ENV: production
+          DEPLOYED: production
         run: npm install && npm run build
         working-directory: ./web
       - name: Deploy 🚀

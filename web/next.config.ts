@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.DEPLOYED === 'production';
 const repoName = 'portfolio';
 
 const nextConfig: NextConfig = {
