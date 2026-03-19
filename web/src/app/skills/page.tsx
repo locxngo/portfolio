@@ -34,7 +34,7 @@ export default function SkillsPage() {
                         <ul className="flex flex-col gap-6">
                             <li className="group">
                                 <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Software and System design</h3>
-                                <p className="text-primary/60 text-sm leading-relaxed">Microservices, Distributed system, Horizontal scale application, and Event-driven architecture.</p>
+                                <p className="text-primary/60 text-sm leading-relaxed">Microservices, Distributed system, and Event-driven architecture.</p>
                             </li>
                             <li className="group">
                                 <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Warehouse & Supply Chain</h3>
@@ -42,7 +42,7 @@ export default function SkillsPage() {
                             </li>
                             <li className="group">
                                 <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">AI Agent & Agentic</h3>
-                                <p className="text-primary/60 text-sm leading-relaxed">Data Pipeline, Contextual Retrieval, RAG, BM25, Workflow, Prompting techniques</p>
+                                <p className="text-primary/60 text-sm leading-relaxed">Data Pipeline, Contextual Retrieval (RAG, BM25), Agent Orchestration, Prompting techniques</p>
                             </li>
                         </ul>
                     </section>
@@ -64,7 +64,7 @@ export default function SkillsPage() {
                             </li>
                             <li className="group">
                                 <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Databases</h3>
-                                <p className="text-primary/60 text-sm leading-relaxed">PostgreSQL, MySQL, MongoDB, Redis</p>
+                                <p className="text-primary/60 text-sm leading-relaxed">PostgreSQL, Redis, MySQL, MongoDB</p>
                             </li>
                             <li className="group">
                                 <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Vector Databases</h3>
