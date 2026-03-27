@@ -84,12 +84,12 @@ export default function SkillsPage() {
                         </div>
                         <ul className="flex flex-col gap-6">
                             <li className="group">
-                                <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Docker & IaC</h3>
+                                <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">Containerization & IaC</h3>
                                 <p className="text-primary/60 text-sm leading-relaxed">Docker, Ansible</p>
                             </li>
                             <li className="group">
                                 <h3 className="text-lg font-bold text-primary mb-1 group-hover:translate-x-1 transition-transform">CI/CD & Observability</h3>
-                                <p className="text-primary/60 text-sm leading-relaxed">Github Action, GitOps pipeline, Grafana stacks.</p>
+                                <p className="text-primary/60 text-sm leading-relaxed">Github Action, GitOps pipeline, Grafana stacks, OpenTelemetry, Datadog</p>
                             </li>
                         </ul>
                     </section>

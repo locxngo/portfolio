@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Loc Ngo | Senior Software Architect",
+  title: "Loc Ngo | Senior Software Architect | Technical Consultant | Microservice & Distributed System",
   description: "A simple man with a big heart and a passion for building scalable distributed systems.",
 };
 
