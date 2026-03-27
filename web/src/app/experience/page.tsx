@@ -37,7 +37,7 @@ const experiences = [
                 description: "",
                 contributions: [
                     { icon: "upgrade", text: "Enhanced the internal Java framework to support Java 17+, introducing an improved dependency injection mechanism via Google Guice to increase application flexibility, extensibility, and customization." },
-                    { icon: "device_hub", text: "Designed and developed a Hardware Abstraction Service capable of managing 2,000+ concurrent devices across the distribution center, significantly reducing hardware constraints on application development teams." },
+                    { icon: "device_hub", text: "Designed and developed a Hardware Abstraction Service capable of managing 2,000+ concurrent bi-directional TCP-based devices across a live distribution center, with horizontal scaling support to grow well beyond that." },
                     { icon: "graph_3", text: "Designed and implemented the Task Activity Framework, a unified specification language bridging product owners and engineers — accelerating the translation of business requirements into consistent system design and implementation across the development lifecycle." },
                 ]
             }
@@ -79,8 +79,8 @@ const experiences = [
                 description: "Responsible for setting the overall technical direction, evaluating and selecting technology stacks, designing system architectures, and ensuring successful delivery across all client engagements.",
                 contributions: [
                     { icon: "open_run", text: "Founded and led the technical division of an outsourcing startup, owning architectural strategy, solution design, and end-to-end technical decision-making across client engagements." },
-                    { icon: "deployed_code", text: "Designed and delivered the first version of Yojee — a now-publicly listed logistics technology platform serving global freight forwarders and shippers including Maersk, CEVA Logistics, and Geodis" },
-                    { icon: "architecture", text: "Defined system architecture for a real-time logistics platform handling complex supply chain operations across road, air, and ocean freight networks across Asia Pacific." },
+                    { icon: "deployed_code", text: "Designed and delivered the first version of Yojee, a real-time logistics platform handling complex supply chain operations across road, air, and ocean freight networks, now-publicly listed logistics technology platform serving global freight forwarders and shippers including Maersk, CEV A Logistics, and Geodis." },
+                    // { icon: "architecture", text: "Defined system architecture for a real-time logistics platform handling complex supply chain operations across road, air, and ocean freight networks across Asia Pacific." },
                 ]
             }
         ]
