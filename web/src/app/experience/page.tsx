@@ -9,6 +9,7 @@ import fortna from "@/img/fortna.jpg"
 import wala from "@/img/wala.png"
 import cnd from "@/img/cnc.jpeg"
 import vtcc from "@/img/vtcc.jpg"
+import { cn } from "@/lib/utils";
 
 const experiences = [
     {
@@ -212,10 +213,18 @@ export default function ExperiencePage() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="w-full max-w-7xl bg-white border border-gray-100 rounded-xl shadow-2xl shadow-gray-200/50 md:shadow-gray-300 overflow-hidden flex flex-col md:flex-row h-full md:h-auto md:max-h-120"
+                        className={
+                            cn(
+                                "w-full max-w-7xl bg-white border border-gray-100 rounded-xl shadow-2xl shadow-gray-300/40 overflow-hidden flex flex-col md:flex-row h-auto max-h-full",
+                            )
+                        }
                     >
                         {/* Role Visual/Identity */}
-                        <div className="bg-gray-50 relative overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 border-b md:border-b-0 md:border-r border-gray-100 md:w-1/3 shrink-0">
+                        <div className={
+                            cn(
+                                "bg-gray-50 relative overflow-hidden flex flex-col items-center justify-center p-6 md:p-12 border-b md:border-b-0 md:border-r border-gray-100 md:w-1/3 shrink-0"
+                            )
+                        }>
                             <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: "radial-gradient(#1a1a1a 1px, transparent 1px)", backgroundSize: "24px 24px" }}></div>
                             <div className="z-10 text-center">
                                 <div className="mb-4 md:mb-6 hidden md:inline-flex  items-center justify-center w-16 h-16 md:w-24 md:h-24 rounded-full border-2 border-primary overflow-hidden bg-white shadow-sm">
@@ -232,14 +241,22 @@ export default function ExperiencePage() {
                             </div>
                         </div>
                         {/* Role Details */}
-                        <div className="flex-1 p-6 md:p-10 flex flex-col overflow-y-auto md:w-2/3">
+                        <div className={
+                            cn(
+                                "flex-1 p-6 md:p-10 flex flex-col overflow-y-auto md:w-2/3",
+                            )
+                        }>
                             <div>
                                 <div className="inline-flex items-center bg-black text-white px-3 py-1 md:px-4 md:py-1.5 rounded mb-6 md:mb-8 sticky top-0 z-20 shadow-md">
                                     <span className="material-symbols-outlined text-xs md:text-sm mr-2"><Calendar size={14} className="md:w-4.5 md:h-4.5" /></span>
                                     <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase">{experience.period}</span>
                                 </div>
                                 {/* Timeline Container */}
-                                <div className="space-y-4 md:space-y-8 relative before:absolute before:left-2.75 before:top-2 before:bottom-2 before:w-px before:bg-gray-200">
+                                <div className={
+                                    cn(
+                                        "space-y-4 md:space-y-8 relative before:absolute before:left-2.75 before:top-2 before:bottom-2 before:w-px before:bg-gray-200",
+                                    )
+                                }>
                                     {experience.roles.map((role, index) => (
                                         <div key={index} className="relative pl-8 md:pl-10">
                                             {/* Timeline Dot */}
